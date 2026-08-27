@@ -73,7 +73,7 @@ style: |
 -->
 
 ---
-# Watch: Calling Bullshit — Correlation and Causation
+# Watch: Correlation and Causation
 
 - Short primer on why correlation alone never proves causation
 - [Correlation and causation](https://www.youtube.com/watch?v=5LGiMpGZ_No)
