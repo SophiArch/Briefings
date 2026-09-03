@@ -1,0 +1,16 @@
+graph LR
+    A["uv init<br/>new project"] --> B["pyproject.toml<br/>+ uv.lock created"]
+    B -->|uv add requests| C["dependency added<br/>pyproject.toml + uv.lock updated"]
+    C -->|uv run script.py| D["uv syncs venv<br/>then runs your code"]
+
+    classDef init fill:#44475a,stroke:#f8f8f2,stroke-width:2px,color:#f8f8f2;
+    classDef proj fill:#282a36,stroke:#8be9fd,stroke-width:2px,color:#f8f8f2;
+    classDef add fill:#282a36,stroke:#ff79c6,stroke-width:2px,color:#f8f8f2;
+    classDef run fill:#282a36,stroke:#50fa7b,stroke-width:2px,color:#f8f8f2;
+
+    class A init;
+    class B proj;
+    class C add;
+    class D run;
+
+    linkStyle default stroke:#f8f8f2,stroke-width:2px;
