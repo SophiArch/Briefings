@@ -1,0 +1,18 @@
+graph LR
+    A["System Python<br/>(one shared install)"] -->|python -m venv .venv| B["Project's .venv/ folder"]
+    B --> C["bin/ (or Scripts/)<br/>own python + pip"]
+    B --> D["lib/site-packages/<br/>project-only packages"]
+    B --> E["pyvenv.cfg<br/>points back to system Python"]
+    C -->|activate| F["Isolated shell session<br/>python/pip resolve inside .venv"]
+
+    classDef system fill:#44475a,stroke:#f8f8f2,stroke-width:2px,color:#f8f8f2;
+    classDef venv fill:#282a36,stroke:#8be9fd,stroke-width:2px,color:#f8f8f2;
+    classDef leaf fill:#282a36,stroke:#50fa7b,stroke-width:2px,color:#f8f8f2;
+    classDef active fill:#282a36,stroke:#ff79c6,stroke-width:2px,color:#f8f8f2;
+
+    class A system;
+    class B venv;
+    class C,D,E leaf;
+    class F active;
+
+    linkStyle default stroke:#f8f8f2,stroke-width:2px;
