@@ -1,0 +1,13 @@
+graph LR
+    A[".env file<br/>API_KEY=demo123"] -->|load_dotenv| B["os.environ<br/>process environment"]
+    B -->|os.getenv| C["Application code<br/>uses the value"]
+
+    classDef file fill:#44475a,stroke:#f8f8f2,stroke-width:2px,color:#f8f8f2;
+    classDef env fill:#282a36,stroke:#8be9fd,stroke-width:2px,color:#f8f8f2;
+    classDef app fill:#282a36,stroke:#50fa7b,stroke-width:2px,color:#f8f8f2;
+
+    class A file;
+    class B env;
+    class C app;
+
+    linkStyle default stroke:#f8f8f2,stroke-width:2px;

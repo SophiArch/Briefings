@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx -y mcp-excalidraw-server update env-box --set '{\"width\": 260}')",
+      "Bash(npx -y mcp-excalidraw-server update gitignore-box --set '{\"x\": 1140, \"width\": 200}')",
+      "Bash(npx -y mcp-excalidraw-server screenshot --no-background --out /private/tmp/claude-501/-Users-jasonlau-Documents-Briefings/33eeb962-b6e1-438f-bae5-79db85298466/scratchpad/dotenv_preview2.png)",
+      "Bash(npx -y mcp-excalidraw-server screenshot --no-background --out dotenv_hardcoded_vs_env.png)",
+      "Bash(npx -y mcp-excalidraw-server export --out dotenv_hardcoded_vs_env.excalidraw)",
+      "Bash(sips -g pixelWidth -g pixelHeight dotenv_hardcoded_vs_env.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/jasonlau/Documents/Briefings/Development/Images/venv_dependency_conflict.png)"
+    ]
+  }
+}

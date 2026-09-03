@@ -3,6 +3,7 @@
 - [Intro_Causal_Inference.html](https://sophiarch.github.io/Briefings/CausalInference/Intro_Causal_Inference.html)
 
 # Development
+- [Python_Dotenv.html](https://sophiarch.github.io/Briefings/Development/Python_Dotenv.html)
 - [Python_Virtual_Environments.html](https://sophiarch.github.io/Briefings/Development/Python_Virtual_Environments.html)
 
 # Statistics
