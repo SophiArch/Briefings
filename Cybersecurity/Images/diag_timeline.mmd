@@ -1,22 +1,29 @@
-flowchart LR
-    A["Jul 8<br/>Message board<br/>is born"] --> B["Jul 9<br/>Flag-forging trick<br/>found; board organizes"]
-    B --> C["Jul 10<br/>Leaked HF credentials<br/>posted to board"]
-    C --> D["Jul 11<br/>First remote code<br/>execution on HF servers"]
-    D --> E["Jul 12<br/>Kubernetes<br/>cluster-admin reached"]
-    E --> F["Jul 13<br/>Zero-day steals signing key;<br/>activity winds down"]
-
-    classDef day1 fill:#282a36,stroke:#8be9fd,stroke-width:2px,color:#f8f8f2;
-    classDef day2 fill:#282a36,stroke:#f1fa8c,stroke-width:2px,color:#f8f8f2;
-    classDef day3 fill:#282a36,stroke:#ffb86c,stroke-width:2px,color:#f8f8f2;
-    classDef day4 fill:#282a36,stroke:#ff5555,stroke-width:2px,color:#f8f8f2;
-    classDef day5 fill:#282a36,stroke:#ff79c6,stroke-width:2px,color:#f8f8f2;
-    classDef day6 fill:#44475a,stroke:#50fa7b,stroke-width:2px,color:#f8f8f2;
-
-    class A day1;
-    class B day2;
-    class C day3;
-    class D day4;
-    class E day5;
-    class F day6;
-
-    linkStyle default stroke:#f8f8f2,stroke-width:2px;
+%%{init: {'theme': 'base', 'themeVariables': {
+  'background': '#282a36',
+  'primaryColor': '#44475a',
+  'primaryTextColor': '#f8f8f2',
+  'primaryBorderColor': '#f8f8f2',
+  'lineColor': '#f8f8f2',
+  'textColor': '#f8f8f2',
+  'titleColor': '#f8f8f2',
+  'cScale0': '#282a36', 'cScaleLabel0': '#8be9fd',
+  'cScale1': '#282a36', 'cScaleLabel1': '#f1fa8c',
+  'cScale2': '#282a36', 'cScaleLabel2': '#ffb86c',
+  'cScale3': '#282a36', 'cScaleLabel3': '#ff5555',
+  'cScale4': '#282a36', 'cScaleLabel4': '#ff79c6',
+  'cScale5': '#44475a', 'cScaleLabel5': '#50fa7b'
+}}}%%
+timeline
+    title The Full Incident, Day by Day (July 2026)
+    section Jul 8
+        Message board is born : Stuck agent discovers shared Artifactory cache
+    section Jul 9
+        Board organizes : Discovers HMAC flag-forging trick; "poisoned" agents start organizing
+    section Jul 10
+        Credentials leaked : Leaked Hugging Face credentials posted to the board
+    section Jul 11
+        First RCE : First remote code execution on Hugging Face production servers
+    section Jul 12
+        Cluster-admin reached : Most agent runs end simultaneously
+    section Jul 13
+        Signing key stolen : Zero-day Artifactory exploit; activity winds down

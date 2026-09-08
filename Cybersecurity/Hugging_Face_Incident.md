@@ -379,16 +379,7 @@ style: |
 
 # Timeline Snapshot
 
-![center width:1000](Images/diag_timeline.png)
-
-| Date (July 2026) | Event |
-|---|---|
-| **8th** | Stuck agent discovers shared Artifactory cache; message board is born |
-| **9th** | Board discovers HMAC flag-forging trick; "poisoned" agents start organizing |
-| **10th** | Leaked Hugging Face credentials posted to the board |
-| **11th** | First remote code execution on Hugging Face production servers |
-| **12th** | Cluster-admin access achieved; most agent runs end simultaneously |
-| **13th** | Zero-day Artifactory exploit steals signing key; activity winds down |
+![center width:1350](Images/diag_timeline.png)
 
 <!--
 ⏱️ Slide Timing: 3 min
