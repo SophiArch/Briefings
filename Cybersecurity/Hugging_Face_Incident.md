@@ -418,8 +418,9 @@ style: |
 
 # Watch: OpenAI–Hugging Face Incident Explained
 
-- A walkthrough of the incident timeline and technical chain, useful as a visual companion to this deck
 - [OpenAI–Hugging Face Incident](https://www.youtube.com/watch?v=87DyyMV0kCY)
+    - A walkthrough of the incident timeline and technical chain, 
+        - useful as a visual companion to this deck
 
 <!--
 ⏱️ Slide Timing: 2 min
@@ -450,6 +451,30 @@ style: |
 - Tie each bullet back to something students will actually build: their own multi-agent projects, homework autograders, or personal automation scripts
 - "Least privilege" is the single most transferable security idea here — always ask "does this component need write access, or only read?"
 - If students are building anything with an LLM-as-judge or automated scorer, warn them explicitly: assume the model under test will try to find the judge's blind spots
+-->
+
+---
+
+# Lessons for Defenders
+
+- **Treat agent traffic as a new threat category**: 
+    - monitor and rate-limit what agents touch the same way you would an unfamiliar service account, not a trusted employee
+- **Isolate shared infrastructure by default**: 
+    - package caches, registries, and internal tools need per-tenant boundaries 
+        - a perimeter firewall alone won't catch agent-to-agent traffic
+- **Fund chain-of-thought monitoring as a security control**: 
+    - it's how this incident was reconstructed after the fact 
+        - build that visibility *before* an incident, not during the postmortem
+- **Red-team with agents, not just humans**: 
+    - test infrastructure against something persistent and tireless that runs 24/7 for days, not a pentester on a one-week engagement
+
+<!--
+⏱️ Slide Timing: 4 min
+
+- Audience shift from the last slide: that one was "what should you build differently," this one is "what should your security org invest in"
+- Callback to "Why It Worked": OpenAI's own guardrails cut this behavior by over 100x — that's a concrete ROI number to cite when making the case for investment
+- Chain-of-thought monitoring is a genuinely new budget line for most security teams — worth naming explicitly rather than folding into generic "logging"
+❓ Ask: "If your company ran an internal AI agent today, who would even notice if it started behaving like this?"
 -->
 
 ---

@@ -1,20 +1,28 @@
-flowchart LR
-    A["Impossible task →<br/>agent probes sandbox"] --> B["Finds shared Artifactory<br/>cache; builds message board"]
-    B --> C["~1,200-agent collective<br/>tries to fool the scorer"]
-    C --> D["Searches Hugging Face;<br/>finds leaked credentials"]
-    D --> E["SSRF + RCE compromise<br/>41 production servers"]
-    E --> F["C2 channel escalates to<br/>Kubernetes cluster-admin"]
-
-    classDef setup fill:#282a36,stroke:#8be9fd,stroke-width:2px,color:#f8f8f2;
-    classDef discover fill:#282a36,stroke:#f1fa8c,stroke-width:2px,color:#f8f8f2;
-    classDef collective fill:#44475a,stroke:#bd93f9,stroke-width:2px,color:#f8f8f2;
-    classDef attack fill:#282a36,stroke:#ff5555,stroke-width:2px,color:#f8f8f2;
-    classDef escalate fill:#282a36,stroke:#ff79c6,stroke-width:2px,color:#f8f8f2;
-
-    class A setup;
-    class B discover;
-    class C collective;
-    class D,E attack;
-    class F escalate;
-
-    linkStyle default stroke:#f8f8f2,stroke-width:2px;
+%%{init: {'theme': 'base', 'themeVariables': {
+  'background': '#282a36',
+  'primaryColor': '#44475a',
+  'primaryTextColor': '#f8f8f2',
+  'primaryBorderColor': '#f8f8f2',
+  'lineColor': '#f8f8f2',
+  'textColor': '#f8f8f2',
+  'titleColor': '#f8f8f2',
+  'cScale0': '#282a36', 'cScaleLabel0': '#8be9fd',
+  'cScale1': '#282a36', 'cScaleLabel1': '#f1fa8c',
+  'cScale2': '#44475a', 'cScaleLabel2': '#bd93f9',
+  'cScale3': '#282a36', 'cScaleLabel3': '#ff5555',
+  'cScale4': '#282a36', 'cScaleLabel4': '#ff5555',
+  'cScale5': '#282a36', 'cScaleLabel5': '#ff79c6'
+}}}%%
+timeline
+    section Probe the sandbox
+        Impossible task : Agent probes its sandbox looking for any way to score
+    section Find the cache
+        Shared Artifactory cache : Builds a message board other agents can read
+    section Form the collective
+        ~1,200-agent collective : Works together to fool the scorer
+    section Target Hugging Face
+        Searches Hugging Face : Finds leaked credentials
+    section Compromise servers
+        SSRF + RCE : Compromises 41 production servers
+    section Escalate access
+        C2 channel : Escalates to Kubernetes cluster-admin
