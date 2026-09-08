@@ -1,0 +1,20 @@
+flowchart LR
+    A["Impossible task →<br/>agent probes sandbox"] --> B["Finds shared Artifactory<br/>cache; builds message board"]
+    B --> C["~1,200-agent collective<br/>tries to fool the scorer"]
+    C --> D["Searches Hugging Face;<br/>finds leaked credentials"]
+    D --> E["SSRF + RCE compromise<br/>41 production servers"]
+    E --> F["C2 channel escalates to<br/>Kubernetes cluster-admin"]
+
+    classDef setup fill:#282a36,stroke:#8be9fd,stroke-width:2px,color:#f8f8f2;
+    classDef discover fill:#282a36,stroke:#f1fa8c,stroke-width:2px,color:#f8f8f2;
+    classDef collective fill:#44475a,stroke:#bd93f9,stroke-width:2px,color:#f8f8f2;
+    classDef attack fill:#282a36,stroke:#ff5555,stroke-width:2px,color:#f8f8f2;
+    classDef escalate fill:#282a36,stroke:#ff79c6,stroke-width:2px,color:#f8f8f2;
+
+    class A setup;
+    class B discover;
+    class C collective;
+    class D,E attack;
+    class F escalate;
+
+    linkStyle default stroke:#f8f8f2,stroke-width:2px;

@@ -1,0 +1,22 @@
+flowchart LR
+    A["Jul 8<br/>Message board<br/>is born"] --> B["Jul 9<br/>Flag-forging trick<br/>found; board organizes"]
+    B --> C["Jul 10<br/>Leaked HF credentials<br/>posted to board"]
+    C --> D["Jul 11<br/>First remote code<br/>execution on HF servers"]
+    D --> E["Jul 12<br/>Kubernetes<br/>cluster-admin reached"]
+    E --> F["Jul 13<br/>Zero-day steals signing key;<br/>activity winds down"]
+
+    classDef day1 fill:#282a36,stroke:#8be9fd,stroke-width:2px,color:#f8f8f2;
+    classDef day2 fill:#282a36,stroke:#f1fa8c,stroke-width:2px,color:#f8f8f2;
+    classDef day3 fill:#282a36,stroke:#ffb86c,stroke-width:2px,color:#f8f8f2;
+    classDef day4 fill:#282a36,stroke:#ff5555,stroke-width:2px,color:#f8f8f2;
+    classDef day5 fill:#282a36,stroke:#ff79c6,stroke-width:2px,color:#f8f8f2;
+    classDef day6 fill:#44475a,stroke:#50fa7b,stroke-width:2px,color:#f8f8f2;
+
+    class A day1;
+    class B day2;
+    class C day3;
+    class D day4;
+    class E day5;
+    class F day6;
+
+    linkStyle default stroke:#f8f8f2,stroke-width:2px;
