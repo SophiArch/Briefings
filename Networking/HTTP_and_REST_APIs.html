@@ -1,0 +1,3103 @@
+<!DOCTYPE html><html lang="C"><head><meta name="author" content="Jason Lau"><meta property="article:author" content="Jason Lau"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{inset:0;position:absolute}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1;view-transition-name:__bespoke_marp_transition_osc__}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@keyframes marp-outgoing-transition-__builtin__fade{0%{opacity:1}to{opacity:0}}@keyframes marp-incoming-transition-__builtin__fade{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}</style><style>@charset "UTF-8";@import url("https://fonts.googleapis.com/css?family=Lato:400,900|IBM+Plex+Sans:400,700");@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css';div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:2em;margin:0.67em 0}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1280px 720px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}/*!
+ * Marp Dracula theme.
+ * @theme dracula
+ * @author Daniel Nicolas Gisolfi
+ *
+ * @auto-scaling true
+ * @size 4:3 960px 720px
+ * @size 16:9 1280px 720px
+ */div#\:\$p > svg > foreignObject > :where(section):not([\20 root]){--dracula-background: #282a36;--dracula-current-line: #44475a;--dracula-foreground: #f8f8f2;--dracula-comment: #6272a4;--dracula-cyan: #8be9fd;--dracula-green: #50fa7b;--dracula-orange: #ffb86c;--dracula-pink: #ff79c6;--dracula-purple:#bd93f9;--dracula-red: #ff5555;--dracula-yellow: #f1fa8c;}div#\:\$p > svg > foreignObject > section .hljs{display:block;overflow-x:auto;padding:0.5em;background:var(--dracula-background)}div#\:\$p > svg > foreignObject > section .hljs, div#\:\$p > svg > foreignObject > section .hljs-subst, div#\:\$p > svg > foreignObject > section .hljs-typing, div#\:\$p > svg > foreignObject > section .hljs-variable, div#\:\$p > svg > foreignObject > section .hljs-template-variable{color:var(--dracula-foreground)}div#\:\$p > svg > foreignObject > section .hljs-comment, div#\:\$p > svg > foreignObject > section .hljs-quote, div#\:\$p > svg > foreignObject > section .hljs-deletion{color:var(--dracula-comment)}div#\:\$p > svg > foreignObject > section .hljs-meta .hljs-doctag, div#\:\$p > svg > foreignObject > section .hljs-built_in, div#\:\$p > svg > foreignObject > section .hljs-selector-tag, div#\:\$p > svg > foreignObject > section .hljs-section, div#\:\$p > svg > foreignObject > section .hljs-link, div#\:\$p > svg > foreignObject > section .hljs-class{color:var(--dracula-cyan)}div#\:\$p > svg > foreignObject > section .hljs-title{color:var(--dracula-green)}div#\:\$p > svg > foreignObject > section .hljs-params{color:var(--dracula-orange)}div#\:\$p > svg > foreignObject > section .hljs-keyword{color:var(--dracula-pink)}div#\:\$p > svg > foreignObject > section .hljs-literal, div#\:\$p > svg > foreignObject > section .hljs-number{color:var(--dracula-purple)}div#\:\$p > svg > foreignObject > section .hljs-regexp{color:var(--dracula-red)}div#\:\$p > svg > foreignObject > section .hljs-string, div#\:\$p > svg > foreignObject > section .hljs-name, div#\:\$p > svg > foreignObject > section .hljs-type, div#\:\$p > svg > foreignObject > section .hljs-attr, div#\:\$p > svg > foreignObject > section .hljs-symbol, div#\:\$p > svg > foreignObject > section .hljs-bullet, div#\:\$p > svg > foreignObject > section .hljs-addition, div#\:\$p > svg > foreignObject > section .hljs-template-tag{color:var(--dracula-yellow)}div#\:\$p > svg > foreignObject > section .hljs-keyword, div#\:\$p > svg > foreignObject > section .hljs-selector-tag, div#\:\$p > svg > foreignObject > section .hljs-literal, div#\:\$p > svg > foreignObject > section .hljs-title, div#\:\$p > svg > foreignObject > section .hljs-section, div#\:\$p > svg > foreignObject > section .hljs-doctag, div#\:\$p > svg > foreignObject > section .hljs-type, div#\:\$p > svg > foreignObject > section .hljs-name, div#\:\$p > svg > foreignObject > section .hljs-strong{font-weight:bold}div#\:\$p > svg > foreignObject > section .hljs-params, div#\:\$p > svg > foreignObject > section .hljs-emphasis{font-style:italic}div#\:\$p > svg > foreignObject > section svg[data-marp-fitting=svg]{max-height:580px}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1), div#\:\$p > svg > foreignObject > section :is(h2, marp-h2), div#\:\$p > svg > foreignObject > section :is(h3, marp-h3), div#\:\$p > svg > foreignObject > section :is(h4, marp-h4), div#\:\$p > svg > foreignObject > section :is(h5, marp-h5), div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){margin:0.5em 0 0 0;color:var(--dracula-pink)}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong, div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong, div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong, div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong, div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong, div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{font-weight:inherit}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:1.7em}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){font-size:1.5em}div#\:\$p > svg > foreignObject > section :is(h3, marp-h3){font-size:1.3em}div#\:\$p > svg > foreignObject > section :is(h4, marp-h4){font-size:1.1em}div#\:\$p > svg > foreignObject > section :is(h5, marp-h5){font-size:1em}div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){font-size:0.9em}div#\:\$p > svg > foreignObject > section p, div#\:\$p > svg > foreignObject > section blockquote{margin:1em 0 0 0}div#\:\$p > svg > foreignObject > section ul > li, div#\:\$p > svg > foreignObject > section ol > li{margin:0.3em 0 0 0;color:var(--dracula-cyan)}div#\:\$p > svg > foreignObject > section ul > li > p, div#\:\$p > svg > foreignObject > section ol > li > p{margin:0.6em 0 0 0}div#\:\$p > svg > foreignObject > section code{display:inline-block;font-family:"IBM Plex Mono", monospace;font-size:0.8em;letter-spacing:0;margin:-0.1em 0.15em;padding:0.1em 0.2em;vertical-align:baseline;color:var(--dracula-green)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){display:block;margin:1em 0 0 0;min-height:1em;overflow:visible}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code{box-sizing:border-box;margin:0;min-width:100%;padding:0.5em;font-size:0.7em}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code svg[data-marp-fitting=svg]{max-height:calc(580px - 1em)}div#\:\$p > svg > foreignObject > section blockquote{margin:1em 0 0 0;padding:0 1em;position:relative;color:var(--dracula-orange)}div#\:\$p > svg > foreignObject > section blockquote::after, div#\:\$p > svg > foreignObject > section blockquote::before{content:"“";display:block;font-family:"Times New Roman", serif;font-weight:bold;position:absolute;color:var(--dracula-green)}div#\:\$p > svg > foreignObject > section blockquote::before{top:0;left:0}div#\:\$p > svg > foreignObject > section blockquote::after{right:0;bottom:0;transform:rotate(180deg)}div#\:\$p > svg > foreignObject > section blockquote > *:first-child{margin-top:0}div#\:\$p > svg > foreignObject > section mark{background:transparent}div#\:\$p > svg > foreignObject > section table{border-spacing:0;border-collapse:collapse;margin:1em 0 0 0}div#\:\$p > svg > foreignObject > section table th, div#\:\$p > svg > foreignObject > section table td{padding:0.2em 0.4em;border-width:1px;border-style:solid}div#\:\$p > svg > foreignObject > section{font-size:30px;font-family:"IBM Plex Sans";line-height:1.35;letter-spacing:1.25px;padding:70px;color:var(--dracula-foreground);background-color:var(--dracula-background)}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size: 30px;}div#\:\$p > svg > foreignObject > section > *:first-child, div#\:\$p > svg > foreignObject > section > header:first-child + *{margin-top:0}div#\:\$p > svg > foreignObject > section a, div#\:\$p > svg > foreignObject > section mark{color:var(--dracula-red)}div#\:\$p > svg > foreignObject > section code{background:var(--dracula-current-line);color:var(--dracula-green)}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong, div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong, div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong, div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong, div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong, div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{color:var(--dracula-current-line)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) > code{background:var(--dracula-current-line)}div#\:\$p > svg > foreignObject > section header, div#\:\$p > svg > foreignObject > section footer, div#\:\$p > svg > foreignObject > section section::after, div#\:\$p > svg > foreignObject > section blockquote::before, div#\:\$p > svg > foreignObject > section blockquote::after{color:var(--dracula-comment)}div#\:\$p > svg > foreignObject > section table th, div#\:\$p > svg > foreignObject > section table td{border-color:var(--dracula-current-line)}div#\:\$p > svg > foreignObject > section table thead th{background:var(--dracula-current-line);color:var(--dracula-yellow)}div#\:\$p > svg > foreignObject > section table tbody > tr:nth-child(even) td, div#\:\$p > svg > foreignObject > section table tbody > tr:nth-child(even) th{background:var(--dracula-current-line)}div#\:\$p > svg > foreignObject > section header, div#\:\$p > svg > foreignObject > section footer, div#\:\$p > svg > foreignObject > section::after{box-sizing:border-box;font-size:66%;height:70px;line-height:50px;overflow:hidden;padding:10px 25px;position:absolute;color:var(--dracula-comment)}div#\:\$p > svg > foreignObject > section::after{--marpit-root-font-size: 66%;}div#\:\$p > svg > foreignObject > section header a, div#\:\$p > svg > foreignObject > section footer a{color:var(--dracula-comment)}div#\:\$p > svg > foreignObject > section header{left:0;right:0;top:0}div#\:\$p > svg > foreignObject > section footer{left:0;right:0;bottom:0}div#\:\$p > svg > foreignObject > section::after{right:0;bottom:0;font-size:80%}div#\:\$p > svg > foreignObject > section::after{--marpit-root-font-size: 80%;}div#\:\$p > svg > foreignObject > section{width:1280px;height:720px}div#\:\$p > svg > foreignObject > section .columns{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:calc(var(--marpit-root-font-size, 1rem) * 1)}div#\:\$p > svg > foreignObject > section.lead :is(h1, marp-h1){text-align:center}div#\:\$p > svg > foreignObject > section table{width:100%}div#\:\$p > svg > foreignObject > section theader{font-size:0.7em;text-align:center}div#\:\$p > svg > foreignObject > section tbody{font-size:0.6em;text-align:left}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:1.35em}div#\:\$p > svg > foreignObject > section li > strong{color:var(--dracula-orange)}div#\:\$p > svg > foreignObject > section li{font-size:0.9em}div#\:\$p > svg > foreignObject > section strong{color:var(--dracula-orange)}div#\:\$p > svg > foreignObject > section blockquote{font-size:0.8em;font-style:italic}div#\:\$p > svg > foreignObject > section img[alt~="center"]{display:block;margin:0 auto}div#\:\$p > svg > foreignObject > section .fa-twitter{color:aqua}div#\:\$p > svg > foreignObject > section .fa-mastodon{color:purple}div#\:\$p > svg > foreignObject > section .fa-linkedin{color:blue}div#\:\$p > svg > foreignObject > section .fa-triangle-exclamation .fa-window-maximize{color:skyblue}div#\:\$p > svg > foreignObject > section .fa-arrow-alt-circle-right{color:#8be9fd}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::after, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::after{display:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction="vertical"]{flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split] > div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split, 50%)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split="right"] > div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure > figcaption{position:absolute;border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"], div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"]{background:transparent!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"], div#\:\$p > svg[data-marpit-svg] > foreignObject[data-marpit-advanced-background="pseudo"]{pointer-events:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background-split]{width:100%;height:100%}
+</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="1" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="26" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://raw.githubusercontent.com/JasonL888/.claude/refs/heads/main/skills/marp_gen/assets/logo.png&quot;);background-size:50% auto;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="1" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="1" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="26" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<header>HTTP and REST APIs</header>
+
+<h1 id="brbrbrhttp-and-rest-apis"><br /><br /><br />HTTP and REST APIs</h1>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="1" style="" data-marpit-pagination-total="26" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="2" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="what-is-http">What is HTTP?</h1>
+<ul>
+<li><strong>HyperText Transfer Protocol</strong> — the language browsers and servers speak</li>
+<li>A <strong>client-server</strong> protocol for exchanging resources
+<ul>
+<li>web pages, images, JSON data, files</li>
+</ul>
+</li>
+<li><strong>Stateless</strong>: each request is independent
+<ul>
+<li>the server remembers nothing between them</li>
+</ul>
+</li>
+<li>Sits at the <strong>application layer</strong>, carried over <strong>TCP</strong> (transport layer)
+<ul>
+<li>HTTP defines the message format, TCP guarantees the bytes arrive intact and in order</li>
+</ul>
+</li>
+</ul>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="3" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="client-server-architecture">Client-Server Architecture</h1>
+<p><img src="Images/diag_client_server.svg" alt="center" style="width:950px;" /></p>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="4" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="the-request-response-cycle">The Request-Response Cycle</h1>
+<p><img src="Images/diag_req_res_cycle.svg" alt="center" style="width:950px;" /></p>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="5" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="anatomy-of-a-url">Anatomy of a URL</h1>
+<p><img src="Images/diag_url_anatomy.svg" alt="center" style="width:720px;" /></p>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="6" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="a-raw-http-request">A Raw HTTP Request</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/posts/1</span> <span class="hljs-meta">HTTP/1.1</span>
+<span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>jsonplaceholder.typicode.com
+<span class="hljs-attribute">Accept</span><span class="hljs-punctuation">: </span>application/json
+</code></pre>
+<ul>
+<li>Line 1: <strong>method</strong> + <strong>path</strong> + <strong>protocol version</strong></li>
+<li><code>Host</code>: which server to talk to (one IP can serve many domains)</li>
+<li><code>Accept</code>: what response format the client wants back</li>
+</ul>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="7" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="a-raw-http-response">A Raw HTTP Response</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-http"><span class="hljs-meta">HTTP/1.1</span> <span class="hljs-number">200</span> OK
+<span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json; charset=utf-8
+
+<span class="language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;userId&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;sunt aut facere repellat&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;body&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;quia et suscipit...&quot;</span>
+<span class="hljs-punctuation">}</span>
+</span></code></pre>
+<ul>
+<li>Status line: protocol version + <strong>status code</strong> + reason phrase</li>
+<li>Headers describe the body; blank line separates headers from <strong>body</strong></li>
+</ul>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="8" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="common-http-methods">Common HTTP Methods</h1>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Purpose</th>
+<th>Has a body?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GET</strong></td>
+<td>Retrieve a resource</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>POST</strong></td>
+<td>Create a new resource</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>PUT</strong></td>
+<td>Replace a resource entirely</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>PATCH</strong></td>
+<td>Partially update a resource</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>DELETE</strong></td>
+<td>Remove a resource</td>
+<td>Usually no</td>
+</tr>
+</tbody>
+</table>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="9" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="method-examples--raw-http">Method Examples — Raw HTTP</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/posts</span> <span class="hljs-meta">HTTP/1.1</span>
+<span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>jsonplaceholder.typicode.com
+<span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json
+
+<span class="language-json"><span class="hljs-punctuation">{</span> <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Hello&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;body&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;World&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;userId&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span> <span class="hljs-punctuation">}</span>
+</span></code></pre>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-http"><span class="hljs-keyword">DELETE</span> <span class="hljs-string">/posts/1</span> <span class="hljs-meta">HTTP/1.1</span>
+<span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>jsonplaceholder.typicode.com
+</code></pre>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="10" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="http-status-codes">HTTP Status Codes</h1>
+<ul>
+<li><strong>1xx</strong> — Informational (rarely seen directly)</li>
+<li><strong>2xx</strong> — Success (<code>200 OK</code>, <code>201 Created</code>, <code>204 No Content</code>)</li>
+<li><strong>3xx</strong> — Redirection (<code>301 Moved Permanently</code>)</li>
+<li><strong>4xx</strong> — Client error (<code>400 Bad Request</code>, <code>401 Unauthorized</code>, <code>404 Not Found</code>)</li>
+<li><strong>5xx</strong> — Server error (<code>500 Internal Server Error</code>)</li>
+</ul>
+<blockquote>
+<p>Rule of thumb: <strong>4xx = you made a mistake, 5xx = the server did</strong></p>
+</blockquote>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="11" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="status-code-examples">Status Code Examples</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-http"><span class="hljs-meta">HTTP/1.1</span> <span class="hljs-number">201</span> Created
+<span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json
+
+<span class="language-json"><span class="hljs-punctuation">{</span> <span class="hljs-attr">&quot;id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">101</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Hello&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;body&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;World&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;userId&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span> <span class="hljs-punctuation">}</span>
+</span></code></pre>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-http"><span class="hljs-meta">HTTP/1.1</span> <span class="hljs-number">404</span> Not Found
+<span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json
+
+<span class="language-json"><span class="hljs-punctuation">{</span> <span class="hljs-attr">&quot;error&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Resource not found.&quot;</span> <span class="hljs-punctuation">}</span>
+</span></code></pre>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="12" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="json--the-language-of-apis">JSON — the Language of APIs</h1>
+<ul>
+<li><strong>JavaScript Object Notation</strong> — lightweight, human-readable data format</li>
+<li>Key-value pairs, nested objects and arrays, no code execution</li>
+<li>Almost every modern web API sends and receives JSON</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">42</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Ada Lovelace&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;skills&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;python&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;math&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;active&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="13" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="http-headers">HTTP Headers</h1>
+<ul>
+<li>Metadata sent with every request and response</li>
+<li>Tell the server (and client) <strong>how to interpret the data</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Example Value</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Content-Type</code></td>
+<td><code>application/json</code></td>
+<td>Format of the body being sent</td>
+</tr>
+<tr>
+<td><code>Accept</code></td>
+<td><code>application/json</code></td>
+<td>Format you want back</td>
+</tr>
+<tr>
+<td><code>Authorization</code></td>
+<td><code>Bearer sk-abc123</code></td>
+<td>Identity / API key</td>
+</tr>
+<tr>
+<td><code>User-Agent</code></td>
+<td><code>python-requests/2.31</code></td>
+<td>What client is making the call</td>
+</tr>
+</tbody>
+</table>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="14" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="what-is-an-api">What is an API?</h1>
+<ul>
+<li><strong>Application Programming Interface</strong> — a contract for how software talks to software</li>
+<li>A <strong>Web API</strong> exposes that contract over HTTP</li>
+<li>Client sends a request to an <strong>endpoint</strong> (a URL), server returns structured data</li>
+<li>You don't need to know how the server works inside — only its <strong>interface</strong></li>
+</ul>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="15" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="what-makes-an-api-restful">What Makes an API &quot;RESTful&quot;?</h1>
+<ul>
+<li><strong>REST</strong> = <strong>RE</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer, a design style (not a protocol)</li>
+<li><strong>Resources</strong> are nouns, identified by URLs — <code>/users</code>, <code>/users/42</code>, <code>/users/42/orders</code></li>
+<li><strong>Methods are verbs</strong> — GET/POST/PUT/PATCH/DELETE act on those nouns</li>
+<li><strong>Stateless</strong> — every request carries everything the server needs (matches HTTP itself)</li>
+<li>Responses typically use <strong>JSON</strong> as the data format</li>
+</ul>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="16" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="rest-resource-mapped-to-http-methods">REST Resource, Mapped to HTTP Methods</h1>
+<p><img src="Images/diag_rest_crud.svg" alt="center" style="height:480px;" /></p>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="17" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="calling-an-api-from-python">Calling an API from Python</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">import</span> requests
+
+response = requests.get(<span class="hljs-string">&quot;https://jsonplaceholder.typicode.com/posts/1&quot;</span>)
+
+<span class="hljs-built_in">print</span>(response.status_code)   <span class="hljs-comment"># 200</span>
+<span class="hljs-built_in">print</span>(response.headers[<span class="hljs-string">&quot;Content-Type&quot;</span>])
+<span class="hljs-built_in">print</span>(response.json())        <span class="hljs-comment"># parsed dict, ready to use</span>
+</code></pre>
+<ul>
+<li><code>requests</code> is the standard library for HTTP in Python (<code>uv add requests</code>)</li>
+<li><code>.json()</code> parses the body straight into a Python dict/list</li>
+</ul>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="18" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="sending-data--post-with-a-json-body">Sending Data — POST with a JSON Body</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">import</span> requests
+
+payload = {<span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Hello&quot;</span>, <span class="hljs-string">&quot;body&quot;</span>: <span class="hljs-string">&quot;World&quot;</span>, <span class="hljs-string">&quot;userId&quot;</span>: <span class="hljs-number">1</span>}
+response = requests.post(
+    <span class="hljs-string">&quot;https://jsonplaceholder.typicode.com/posts&quot;</span>,
+    json=payload,
+)
+
+<span class="hljs-built_in">print</span>(response.status_code)   <span class="hljs-comment"># 201</span>
+<span class="hljs-built_in">print</span>(response.json()[<span class="hljs-string">&quot;id&quot;</span>])  <span class="hljs-comment"># new resource id</span>
+</code></pre>
+<ul>
+<li><code>json=payload</code> auto-encodes the dict <strong>and</strong> sets <code>Content-Type: application/json</code></li>
+<li>Compare to <code>data=payload</code>, which sends form-encoded data instead — a common source of 400 errors</li>
+</ul>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="19" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="query-parameters-and-headers-in-python">Query Parameters and Headers in Python</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">import</span> requests
+
+response = requests.get(
+    <span class="hljs-string">&quot;https://jsonplaceholder.typicode.com/posts&quot;</span>,
+    params={<span class="hljs-string">&quot;userId&quot;</span>: <span class="hljs-number">1</span>},                       <span class="hljs-comment"># -&gt; ?userId=1</span>
+    headers={<span class="hljs-string">&quot;Authorization&quot;</span>: <span class="hljs-string">&quot;Bearer YOUR_TOKEN&quot;</span>},
+)
+
+<span class="hljs-keyword">for</span> post <span class="hljs-keyword">in</span> response.json():
+    <span class="hljs-built_in">print</span>(post[<span class="hljs-string">&quot;title&quot;</span>])
+</code></pre>
+<ul>
+<li><code>params=</code> builds and URL-encodes the query string for you</li>
+<li><code>headers=</code> sends any custom headers — most often used for authentication</li>
+</ul>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="20" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="api-authentication-basics">API Authentication Basics</h1>
+<ul>
+<li>Most real-world APIs require proof of identity — an <strong>API key</strong> or <strong>token</strong></li>
+<li>Most common pattern: <code>Authorization</code> header with a <strong>Bearer token</strong></li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>Authorization: Bearer YOUR_API_KEY
+</code></pre>
+<ul>
+<li>Common services using this pattern: GitHub, Stripe, OpenAI, HuggingFace</li>
+<li><strong>Never hardcode keys in source code</strong> — load from environment variables instead</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">import</span> os, requests
+headers = {<span class="hljs-string">&quot;Authorization&quot;</span>: <span class="hljs-string">f&quot;Bearer <span class="hljs-subst">{os.environ[<span class="hljs-string">&#x27;API_TOKEN&#x27;</span>]}</span>&quot;</span>}
+</code></pre>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="21" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="error-handling-in-python">Error Handling in Python</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">response = requests.get(<span class="hljs-string">&quot;https://jsonplaceholder.typicode.com/posts/9999&quot;</span>)
+
+<span class="hljs-keyword">if</span> response.status_code == <span class="hljs-number">200</span>:
+    data = response.json()
+<span class="hljs-keyword">else</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Request failed: <span class="hljs-subst">{response.status_code}</span> - <span class="hljs-subst">{response.text}</span>&quot;</span>)
+
+<span class="hljs-comment"># or, raise an exception on any 4xx/5xx:</span>
+response.raise_for_status()
+</code></pre>
+<ul>
+<li>Always check <code>status_code</code> (or use <code>raise_for_status()</code>) before trusting <code>.json()</code></li>
+<li><code>.text</code> shows the raw response body — invaluable for debugging error messages</li>
+</ul>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="22" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="http--rest-in-practice">HTTP + REST in Practice</h1>
+<div class="columns">
+<div>
+<p><strong>You will use this to:</strong></p>
+<ul>
+<li>Fetch data from public APIs</li>
+<li>Submit forms and data to a backend</li>
+<li>Call ML/LLM inference endpoints</li>
+<li>Build your own backend routes later</li>
+</ul>
+</div>
+<div>
+<p><strong>Typical flow, every time:</strong></p>
+<ol>
+<li>Pick the right method + URL</li>
+<li>Add headers (auth, content-type)</li>
+<li>Send params or a JSON body</li>
+<li>Check <code>status_code</code></li>
+<li>Parse <code>.json()</code> and use the data</li>
+</ol>
+</div>
+</div>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="23" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="common-pitfalls">Common Pitfalls</h1>
+<ul>
+<li><strong>Forgetting <code>Content-Type</code></strong> when sending a JSON body — server can't parse it correctly</li>
+<li><strong>Using <code>data=</code> instead of <code>json=</code></strong> in <code>requests</code> — sends the wrong encoding</li>
+<li><strong>Not checking <code>status_code</code></strong> before calling <code>.json()</code> — crashes on error responses</li>
+<li><strong>Hardcoding API keys</strong> in scripts — security risk, breaks if committed to git</li>
+<li><strong>Confusing PUT and PATCH</strong> — PUT replaces the whole resource, PATCH updates part of it</li>
+</ul>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="24" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="cheat-sheet">Cheat Sheet</h1>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Python (<code>requests</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET request</td>
+<td><code>requests.get(url)</code></td>
+</tr>
+<tr>
+<td>GET with query params</td>
+<td><code>requests.get(url, params={...})</code></td>
+</tr>
+<tr>
+<td>POST with JSON body</td>
+<td><code>requests.post(url, json={...})</code></td>
+</tr>
+<tr>
+<td>Add headers / auth</td>
+<td><code>requests.get(url, headers={...})</code></td>
+</tr>
+<tr>
+<td>Check success</td>
+<td><code>response.status_code</code>, <code>response.raise_for_status()</code></td>
+</tr>
+<tr>
+<td>Parse JSON response</td>
+<td><code>response.json()</code></td>
+</tr>
+<tr>
+<td>Raw response text</td>
+<td><code>response.text</code></td>
+</tr>
+</tbody>
+</table>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="25" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="references">References</h1>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HTTP/1.1 specification</strong></td>
+<td>Fielding, R., &amp; Reschke, J. (2014). <a href="https://www.rfc-editor.org/rfc/rfc7231"><em>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</em></a>. RFC 7231, IETF.</td>
+</tr>
+<tr>
+<td><strong>REST architectural style</strong></td>
+<td>Fielding, R. (2000). <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm"><em>Architectural Styles and the Design of Network-based Software Architectures</em></a> (Doctoral dissertation, Chapter 5). University of California, Irvine.</td>
+</tr>
+<tr>
+<td><strong>MDN HTTP documentation</strong></td>
+<td>Mozilla. (2026). <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP — MDN Web Docs</a>.</td>
+</tr>
+<tr>
+<td><strong><code>requests</code> library docs</strong></td>
+<td>Reitz, K. (2026). <a href="https://requests.readthedocs.io/">Requests: HTTP for Humans</a>.</td>
+</tr>
+<tr>
+<td><strong>HTTP status codes reference</strong></td>
+<td>Mozilla. (2026). <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP response status codes — MDN Web Docs</a>.</td>
+</tr>
+<tr>
+<td><strong>Test API for practice</strong></td>
+<td>typicode. (2026). <a href="https://jsonplaceholder.typicode.com/">JSONPlaceholder — Free fake API for testing</a>.</td>
+</tr>
+</tbody>
+</table>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-paginate="true" data-class="lead" data-header="HTTP and REST APIs" data-footer="© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)" data-style=".columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+" data-theme="k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja" lang="C" class="lead" data-marpit-pagination="26" style="--paginate:true;--class:lead;--header:HTTP and REST APIs;--footer:© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com);--style:.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+section.lead h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+theader {
+    font-size: 0.7em;
+    text-align: center;
+}
+tbody {
+    font-size: 0.6em;
+    text-align: left;
+}
+h1 {
+    font-size: 1.35em;
+}
+li &gt; strong {
+    color: var(--dracula-orange);
+}
+li {
+  font-size: 0.9em;
+}
+strong {
+    color: var(--dracula-orange);
+}
+blockquote {
+    font-size: 0.8em;
+    font-style: italic;
+}
+img[alt~=&quot;center&quot;] {
+    display: block;
+    margin: 0 auto;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-triangle-exclamation
+.fa-window-maximize { color: skyblue; }
+.fa-arrow-alt-circle-right {color: #8be9fd }
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+;--theme:k46czxcmbvjgb2gyo27bzsbsjpa14zf5uwwtbau4ja;" data-marpit-pagination-total="26" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;builtinFallback&quot;:true}" data-size="16:9">
+<header>HTTP and REST APIs</header>
+<h1 id="brbrrecap--practice"><br /><br />Recap &amp; Practice</h1>
+<ul>
+<li>HTTP is a stateless client-server protocol: request out, response back, every time</li>
+<li>REST names resources as URLs and uses HTTP methods as the verbs that act on them</li>
+<li><code>requests.get/post(url, params=, json=, headers=)</code> covers nearly every API call you'll write</li>
+<li><strong>Before next session:</strong> pick any public API (no key needed) and fetch + print one resource with <code>requests</code></li>
+</ul>
+<footer>© 2026 SophiArch <a href="https://lms.sophiarch.com">lms.sophiarch.com</a></footer>
+</section>
+<script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{container;containerSize;containerObserver;svg;svgComputedStyle;svgPreserveAspectRatio="xMinYMid meet";wrapper;wrapperSize;wrapperObserver;constructor(){super();const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver(((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()}))}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=this.shadowRoot.querySelector(`div[${e}]`)??void 0;const t=this.svg;this.svg=this.wrapper?.querySelector(`svg[${i}]`)??void 0,this.svg!==t&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=this.svg?.querySelector(`span[${n}]`)??void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame((()=>{t.style.display=""})))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){let t=Math.ceil(this.containerSize?.width??0);const e=Math.ceil(this.containerSize?.height??0);void 0!==this.dataset.downscaleOnly&&(t=Math.max(t,this.wrapperSize?.width??0));const i=this.svg?.querySelector(":scope > foreignObject");if(i?.setAttribute("width",`${t}`),i?.setAttribute("height",`${e}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${t} ${e}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=t<=0||e<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const r=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this._shadow()}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_shadow(){if(!this.shadowRoot)try{this.attachShadow({mode:"open"})}catch(t){if(!(t instanceof Error&&"NotSupportedError"===t.name))throw t}return this.shadowRoot}_update(){const t=this._shadow();if(t){const e=i?`<style>:host { ${i} }</style>`:"";let n="<slot></slot>";const{autoScaling:s}=this.dataset;if(void 0!==s){n=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===s?"data-downscale-only":""}>${n}</marp-auto-scaling>`}t.innerHTML=e+n}}};let o;const a=Symbol();let l;const c="marpitSVGPolyfill:setZoomFactor,",d=Symbol(),h=Symbol();const g=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[u]:[],i={then:e=>(t?(async()=>{if(void 0===l){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise((t=>{i.addEventListener("load",(()=>t()))}));i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),l=e.getImageData(5,5,1,1).data[3]<128}return l})().then((t=>{null==e||e(t?[u]:[])})):null==e||e([]),i)};return Object.assign(e,i)};let p,m;function u(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[h]||(Object.defineProperty(window,h,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",(({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(c)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(m=i)}}catch(t){console.error(t)}})));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,s,r,o;t.style.transform||(t.style.transform="translateZ(0)");const a=i||m||t.currentScale||1;p!==a&&(p=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(o=null===(r=n.y)||void 0===r?void 0:r.baseVal.value)&&void 0!==o?o:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}})),!1!==n&&Array.from(e.querySelectorAll("iframe"),(({contentWindow:t})=>{null==t||t.postMessage(`${c}${n}`,"null"===window.origin?"*":window.origin)}))}function v({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[d])return t[d];let e=!0;const i=()=>{e=!1,delete t[d]};Object.defineProperty(t,d,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await g()}finally{s=!0}})();const r=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(r)};return r(),i}(e);return t?(i(),()=>{}):i}p=1,m=void 0;const w=Symbol(),b=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[a];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,a=t[n].proto();(o??(o=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is"),o))&&a!==HTMLElement?i||customElements.define(s,r(a,{style:t[n].style}),{extends:n}):(i||customElements.define(s,r(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach((t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)})))}window[a]=!0})(e),e[w])return e[w];const i=v({target:e}),n=()=>{i(),delete e[w]},l=Object.assign(n,{cleanup:n,update:()=>b(e)});return Object.defineProperty(e,w,{configurable:!0,value:l}),l},y=document.currentScript;b(y?y.getRootNode():document)}();
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="0" tabindex="0"><p>⏱️ Slide Timing: 1 min
+
+- Welcome and frame the session: every website and every Python `requests.get()` call rides on the same protocol — HTTP
+- Promise: by the end, everyone can read a raw HTTP request/response, explain what REST means, and call a real API from Python
+- Bridge: start from the most basic question — what actually happens when you type a URL into a browser</p></div><div class="bespoke-marp-note" data-index="1" tabindex="0"><p>⏱️ Slide Timing: 3 min
+
+- Analogy: HTTP is like a standardized order form at a restaurant — client fills it out, server fills the order, no memory of your last visit
+- Stateless is the counterintuitive part — ask students how logins &quot;remember&quot; you if the protocol has no memory
+- Bridge: apps use cookies/tokens on top of HTTP to fake statefulness — we'll touch this in the auth slide
+❓ Ask: &quot;If HTTP forgets everything between requests, how does a website keep you logged in?&quot;</p></div><div class="bespoke-marp-note" data-index="2" tabindex="0"><p>⏱️ Slide Timing: 3 min
+
+- Client initiates — server never contacts you first in plain HTTP
+- Every Python `requests.get(url)` call is playing the &quot;client&quot; role in this exact picture
+- The arrows are the whole mental model for this entire deck — everything else is detail on top of &quot;request out, response back&quot;</p></div><div class="bespoke-marp-note" data-index="3" tabindex="0"><p>⏱️ Slide Timing: 4 min
+
+- Walk through top to bottom: client sends a request line + headers, server processes, server replies with a status + headers + body
+- The &quot;Note&quot; boxes are where your backend code (or the API you're calling) actually does work — everything else is just envelope
+- Bridge: let's see what these messages actually look like as raw text</p></div><div class="bespoke-marp-note" data-index="4" tabindex="0"><p>⏱️ Slide Timing: 3 min
+
+- Scheme + host + port get you to the right server; path + query + fragment tell that server what you want
+- Fragment is the one piece that never leaves the browser — good trivia: `#profile` never appears in server logs
+- Students will build query strings constantly with the `requests` library — worth lingering on that box</p></div><div class="bespoke-marp-note" data-index="5" tabindex="0"><p>⏱️ Slide Timing: 3 min
+
+- This is literally what your browser or `requests` library sends over the wire — nothing hidden
+- Point out there's no body on a GET — data goes in the URL/query string, not the payload</p></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>⏱️ Slide Timing: 3 min
+
+- Same shape every time: status line, headers, blank line, body — that pattern never changes
+- This blank line trips people up when they try to hand-write raw HTTP — it's the hard boundary between metadata and payload</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>⏱️ Slide Timing: 4 min
+
+- PUT vs PATCH is the classic mix-up: PUT replaces the whole object, PATCH edits just the fields you send
+- These five methods cover roughly 95% of everything students will do calling APIs
+- Bridge: map these methods onto REST resource design next</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>⏱️ Slide Timing: 3 min
+
+- POST carries a body describing the new resource; note the required `Content-Type` header
+- DELETE typically has no body — the URL alone identifies what to remove</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>⏱️ Slide Timing: 3 min
+
+- 404 is the one everyone already knows — anchor the rest of the ranges to that familiar one
+- 401 vs 403 is a common interview question: 401 means &quot;who are you,&quot; 403 means &quot;I know who you are, still no&quot;</p></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>⏱️ Slide Timing: 2 min
+
+- 201 Created is the expected response to a successful POST — note the new `id` in the body
+- Well-designed APIs put a human-readable `error` message in the body even on failure — always print `response.text` when debugging</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>⏱️ Slide Timing: 3 min
+
+- JSON maps almost 1:1 onto Python dicts and lists — that's why `response.json()` is so convenient
+- Point out the types available: string, number, boolean, null, array, object — no dates, no sets, no tuples</p></div><div class="bespoke-marp-note" data-index="12" tabindex="0"><p>⏱️ Slide Timing: 3 min
+
+- `Content-Type` describes what you're sending; `Accept` describes what you want back — students often confuse the two
+- Missing `Content-Type: application/json` on a POST is one of the most common bugs in early API code</p></div><div class="bespoke-marp-note" data-index="13" tabindex="0"><p>⏱️ Slide Timing: 2 min
+
+- Analogy: a restaurant menu is an API — you don't need to know the kitchen, just what you can order and what comes back
+- Bridge: REST is simply the most common *style* of designing these web APIs</p></div><div class="bespoke-marp-note" data-index="14" tabindex="0"><p>⏱️ Slide Timing: 4 min
+
+- Key mental shift: URLs name *things*, HTTP methods say what to *do* to them — `/deleteUser?id=42` is not RESTful, `DELETE /users/42` is
+- Nesting resources (`/users/42/orders`) reads almost like a sentence — &quot;orders belonging to user 42&quot;
+- This is a convention, not an enforced standard — different teams bend the rules; the goal is predictability for the client</p></div><div class="bespoke-marp-note" data-index="15" tabindex="0"><p>⏱️ Slide Timing: 3 min
+
+- Same URL, `/users/42`, different verb, completely different action — that's the whole idea of REST in one picture
+- This GET/POST/PUT-PATCH/DELETE mapping is often called &quot;CRUD&quot; — Create, Read, Update, Delete
+❓ Ask: &quot;If /users/42 is the resource, what URL would list *all* users?&quot;</p></div><div class="bespoke-marp-note" data-index="16" tabindex="0"><p>⏱️ Slide Timing: 4 min
+
+- Live-run this if possible — jsonplaceholder.typicode.com needs no API key, perfect for a first demo
+- `response.status_code` and `response.json()` are the two attributes students will use in nearly every script they write</p></div><div class="bespoke-marp-note" data-index="17" tabindex="0"><p>⏱️ Slide Timing: 4 min
+
+- The `json=` vs `data=` distinction is the #1 gotcha students hit — emphasize it explicitly
+- Point out how little code this is compared to the raw HTTP text two demo cycles ago — `requests` builds the message for you</p></div><div class="bespoke-marp-note" data-index="18" tabindex="0"><p>⏱️ Slide Timing: 3 min
+
+- Tie straight back to the URL anatomy slide — `params` is just a Python-friendly way to build that `?key=value` section
+- Never hand-build query strings with string concatenation — `params=` handles escaping special characters safely</p></div><div class="bespoke-marp-note" data-index="19" tabindex="0"><p>⏱️ Slide Timing: 4 min
+
+- 401 Unauthorized almost always means a missing or malformed Authorization header — students will see this often
+- Tie back to the `.env` / `python-dotenv` habits from earlier sessions — same discipline applies to API keys</p></div><div class="bespoke-marp-note" data-index="20" tabindex="0"><p>⏱️ Slide Timing: 3 min
+
+- `raise_for_status()` is the idiomatic shortcut — it raises `HTTPError` automatically on any 4xx/5xx response
+- Common bug: calling `.json()` on an error response that isn't actually JSON — check status first</p></div><div class="bespoke-marp-note" data-index="21" tabindex="0"><p>⏱️ Slide Timing: 3 min
+
+- This five-step flow is the same whether you're calling a weather API or a production ML endpoint — reinforce it as the reusable pattern
+- Good moment to preview: later sessions on building your own API will flip this diagram around, server side instead of client side</p></div><div class="bespoke-marp-note" data-index="22" tabindex="0"><p>⏱️ Slide Timing: 3 min
+
+- These five cover the overwhelming majority of &quot;my API call isn't working&quot; questions in office hours
+- Suggest students bookmark this slide specifically — the fastest debugging checklist for API issues</p></div><div class="bespoke-marp-note" data-index="23" tabindex="0"><p>⏱️ Slide Timing: 2 min
+
+- Suggest students screenshot this slide — it's the reference they'll reach for on every future assignment involving an API</p></div><div class="bespoke-marp-note" data-index="24" tabindex="0"><p>⏱️ Slide Timing: 1 min
+
+- Highest priority to bookmark: MDN HTTP docs for day-to-day lookups, JSONPlaceholder for risk-free practice calls</p></div><div class="bespoke-marp-note" data-index="25" tabindex="0"><p>⏱️ Slide Timing: 2 min
+
+- Close the loop back to the opening promise: raw HTTP, REST concepts, and a working Python call, all covered
+- Practice prompt: JSONPlaceholder or any open public API works — the goal is muscle memory on status codes and `.json()`</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@4.1.2/lib/bespoke.js.LICENSE.txt */
+!function(){"use strict";function e(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}var t,n,r=(n||(n=1,t={from:function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),o=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,(function(e){return"SCRIPT"!==e.nodeName})),a={},i=function(e,t){return(t=t||{}).index=o.indexOf(e),t.slide=e,t},s=function(e,t){a[e]=(a[e]||[]).filter((function(e){return e!==t}))},c=function(e,t){return(a[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},l=function(e,t){o[e]&&(n&&c("deactivate",i(n,t)),n=o[e],c("activate",i(n,t)))},d=function(e,t){var r=o.indexOf(n)+e;c(e>0?"next":"prev",i(n,t))&&l(r,t)},u={off:s,on:function(e,t){return(a[e]||(a[e]=[])).push(t),s.bind(null,e,t)},fire:c,slide:function(e,t){if(!arguments.length)return o.indexOf(n);c("slide",i(o[e],t))&&l(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:o,destroy:function(e){c("destroy",i(n,e)),a={}}};return(t||[]).forEach((function(e){e(u)})),n||l(0),u}}),t),o=e(r);const a=document.body,i=(...e)=>history.replaceState(...e),s="",c="presenter",l="next",d=["",c,l],u="bespoke-marp-",f=`data-${u}`,m=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const a=e.toString();return`${t}//${n}${r}${a?"?":""}${a}${o}`},g=()=>a.dataset.bespokeView,p=e=>new URLSearchParams(location.search).get(e),v=(e,t={})=>{const n={location,setter:i,...t},r=new URLSearchParams(n.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?r.set(t,n):r.delete(t)}try{n.setter({...window.history.state??{}},"",m(r,n.location))}catch(e){console.error(e)}},h=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch{return!1}})(),y=e=>{try{return localStorage.getItem(e)}catch{return null}},b=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch{return!1}},w=e=>{try{return localStorage.removeItem(e),!0}catch{return!1}},x=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},k=e=>{e.parent.classList.add(`${u}parent`),e.slides.forEach((e=>e.classList.add(`${u}slide`))),e.on("activate",(t=>{const n=`${u}active`,r=t.slide,o=r.classList,a=!o.contains(n);if(e.slides.forEach((e=>{e.classList.remove(n),x(e,!0)})),o.add(n),x(r,!1),a){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}}))},$=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map((e=>[null,...e.querySelectorAll("[data-marpit-fragment]")]))});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach(((e,t)=>{e.forEach(((e,n)=>{if(null==e)return;const a=t<r||t===r&&n<=o;e.setAttribute(`${f}fragment`,(a?"":"in")+"active");const i=`${f}current-fragment`;t===r&&n===o?e.setAttribute(i,"current"):e.removeAttribute(i)}))})),e.fragmentIndex=o;const a={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",a)};e.on("next",(({fragment:a=!0})=>{if(a){if(r(1))return o(t,n+1),!1;const a=t+1;e.fragments[a]&&o(a,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const a=e.fragments[t+1];a&&o(t+1,a.length-1)}})),e.on("prev",(({fragment:a=!0})=>{if(r(-1)&&a)return o(t,n-1),!1;const i=t-1;e.fragments[i]&&o(i,e.fragments[i].length-1)})),e.on("slide",(({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)})),o(0,0)},E=document,L=()=>!(!E.fullscreenEnabled&&!E.webkitFullscreenEnabled),S=()=>!(!E.fullscreenElement&&!E.webkitFullscreenElement),P=e=>{e.fullscreen=()=>{L()&&(async()=>{S()?(E.exitFullscreen||E.webkitExitFullscreen)?.call(E):((e=E.body)=>{(e.requestFullscreen||e.webkitRequestFullscreen)?.call(e)})()})()},document.addEventListener("keydown",(t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!L()||(e.fullscreen(),t.preventDefault())}))},_=`${u}inactive`,T=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let a;const i=()=>{a&&clearTimeout(a),a=setTimeout((()=>{r.add(_),o()}),e),r.contains(_)&&(r.remove(_),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,i);setTimeout(i,0)},I=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],M=e=>{e.parent.addEventListener("keydown",(e=>{if(!e.target)return;const t=e.target;(I.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()}))},O=e=>{window.addEventListener("load",(()=>{for(const t of e.slides){const e=t.querySelector("marp-auto-scaling, [data-auto-scaling], [data-marp-fitting]");t.setAttribute(`${f}load`,e?"":"hideable")}}))},A=({interval:e=250}={})=>t=>{document.addEventListener("keydown",(e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()}));let n,r,o=0;t.parent.addEventListener("wheel",(a=>{let i=!1;const s=(e,t)=>{e&&(i=i||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),e?.parentElement&&s(e.parentElement,t)};if(0!==a.deltaX&&s(a.target,"X"),0!==a.deltaY&&s(a.target,"Y"),i)return;a.preventDefault();const c=Math.sqrt(a.deltaX**2+a.deltaY**2);if(void 0!==a.wheelDelta){if(void 0===a.webkitForce&&Math.abs(a.wheelDelta)<40)return;if(a.deltaMode===a.DOM_DELTA_PIXEL&&c<4)return}else if(a.deltaMode===a.DOM_DELTA_PIXEL&&c<12)return;r&&clearTimeout(r),r=setTimeout((()=>{n=0}),e);const l=Date.now()-o<e,d=c<=n;if(n=c,l||d)return;let u;(a.deltaX>0||a.deltaY>0)&&(u="next"),(a.deltaX<0||a.deltaY<0)&&(u="prev"),u&&(t[u](),o=Date.now())}))},C=(e=`.${u}osc`)=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${f}osc=${JSON.stringify(e)}]`).forEach(n)};return L()||n("fullscreen",(e=>e.style.display="none")),h||n("presenter",(e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."})),e=>{t.addEventListener("click",(t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?e?.fullscreen():"presenter"===n&&e.openPresenterView()}})),e.parent.appendChild(t),e.on("activate",(({index:t})=>{n("page",(n=>n.textContent=`Page ${t+1} of ${e.slides.length}`))})),e.on("fragment",(({index:t,fragments:r,fragmentIndex:o})=>{n("prev",(e=>e.disabled=0===t&&0===o)),n("next",(n=>n.disabled=t===e.slides.length-1&&o===r.length-1))})),e.on("marp-active",(()=>x(t,!1))),e.on("marp-inactive",(()=>x(t,!0))),L()&&(e=>{for(const t of["","webkit"])E.addEventListener(t+"fullscreenchange",e)})((()=>n("fullscreen",(e=>e.classList.toggle("exit",L()&&S())))))}},D=e=>{window.addEventListener("message",(t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),a=Number.parseInt(n,10)+1;a>=e.fragments[o].length&&(o+=1,a=0),e.slide(o,{fragment:a})}}))};var N,B,q,K,j,F,V,U={exports:{}},X=(N||(N=1,U.exports=(B=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"],q=function(e){return String(e).replace(/[&<>"']/g,(function(e){return"&"+K[e]+";"}))},K={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},j="dangerouslySetInnerHTML",F={className:"class",htmlFor:"for"},V={},function(e,t){var n=[],r="";t=t||{};for(var o=arguments.length;o-- >2;)n.push(arguments[o]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(var a in t)!1!==t[a]&&null!=t[a]&&a!==j&&(r+=" "+(F[a]?F[a]:q(a))+'="'+q(t[a])+'"');r+=">"}if(-1===B.indexOf(e)){if(t[j])r+=t[j].__html;else for(;n.length;){var i=n.pop();if(i)if(i.pop)for(var s=i.length;s--;)n.push(i[s]);else r+=!0===V[i]?i:q(i)}r+=e?"</"+e+">":""}return V[r]=!0,r})),U.exports),H=e(X);const R=({children:e})=>H(null,null,...e),W=`${u}presenter-`,J={container:`${W}container`,dragbar:`${W}dragbar-container`,next:`${W}next`,nextContainer:`${W}next-container`,noteContainer:`${W}note-container`,noteWrapper:`${W}note-wrapper`,noteButtons:`${W}note-buttons`,infoContainer:`${W}info-container`,infoPage:`${W}info-page`,infoPageText:`${W}info-page-text`,infoPagePrev:`${W}info-page-prev`,infoPageNext:`${W}info-page-next`,noteButtonsBigger:`${W}note-bigger`,noteButtonsSmaller:`${W}note-smaller`,infoTime:`${W}info-time`,infoTimer:`${W}info-timer`},Y=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=J.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",H(R,null,H("div",{class:J.nextContainer},H("iframe",{class:J.next,src:"?view=next"})),H("div",{class:J.dragbar}),H("div",{class:J.noteContainer},H("div",{class:J.noteWrapper}),H("div",{class:J.noteButtons},H("button",{class:J.noteButtonsSmaller,tabindex:"-1",title:"Smaller notes font size"},"Smaller notes font size"),H("button",{class:J.noteButtonsBigger,tabindex:"-1",title:"Bigger notes font size"},"Bigger notes font size"))),H("div",{class:J.infoContainer},H("div",{class:J.infoPage},H("button",{class:J.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),H("span",{class:J.infoPageText}),H("button",{class:J.infoPageNext,tabindex:"-1",title:"Next"},"Next")),H("time",{class:J.infoTime,title:"Current time"}),H("time",{class:J.infoTimer,title:"Timer"})))),t})(e.parent)),(e=>{let t=!1;r(J.dragbar).addEventListener("mousedown",(()=>{t=!0,r(J.dragbar).classList.add("active")})),window.addEventListener("mouseup",(()=>{t=!1,r(J.dragbar).classList.remove("active")})),window.addEventListener("mousemove",(e=>{if(!t)return;const n=e.clientX/document.documentElement.clientWidth*100;r(J.container).style.setProperty("--bespoke-marp-presenter-split-ratio",`${Math.max(0,Math.min(100,n))}%`)})),r(J.nextContainer).addEventListener("click",(()=>e.next()));const n=r(J.next),o=(a=n,(e,t)=>a.contentWindow?.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin));var a;n.addEventListener("load",(()=>{r(J.nextContainer).classList.add("active"),o(e.slide(),e.fragmentIndex),e.on("fragment",(({index:e,fragmentIndex:t})=>o(e,t)))}));const i=document.querySelectorAll(".bespoke-marp-note");i.forEach((e=>{e.addEventListener("keydown",(e=>e.stopPropagation())),r(J.noteWrapper).appendChild(e)})),e.on("activate",(()=>i.forEach((t=>t.classList.toggle("active",t.dataset.index==e.slide())))));let s=0;const c=e=>{s=Math.max(-5,s+e),r(J.noteContainer).style.setProperty("--bespoke-marp-note-font-scale",(1.2**s).toFixed(4))},l=()=>c(1),d=()=>c(-1),u=r(J.noteButtonsBigger),f=r(J.noteButtonsSmaller);u.addEventListener("click",(()=>{u.blur(),l()})),f.addEventListener("click",(()=>{f.blur(),d()})),document.addEventListener("keydown",(e=>{"+"===e.key&&l(),"-"===e.key&&d()}),!0),e.on("activate",(({index:t})=>{r(J.infoPageText).textContent=`${t+1} / ${e.slides.length}`}));const m=r(J.infoPagePrev),g=r(J.infoPageNext);m.addEventListener("click",(t=>{m.blur(),e.prev({fragment:!t.shiftKey})})),g.addEventListener("click",(t=>{g.blur(),e.next({fragment:!t.shiftKey})})),e.on("fragment",(({index:t,fragments:n,fragmentIndex:r})=>{m.disabled=0===t&&0===r,g.disabled=t===e.slides.length-1&&r===n.length-1}));let p=new Date;const v=()=>{const e=new Date,t=e=>`${Math.floor(e)}`.padStart(2,"0"),n=e.getTime()-p.getTime(),o=t(n/1e3%60),a=t(n/1e3/60%60),i=t(n/36e5%24);r(J.infoTime).textContent=e.toLocaleTimeString(),r(J.infoTimer).textContent=`${i}:${a}:${o}`};v(),setInterval(v,250),r(J.infoTimer).addEventListener("click",(()=>{p=new Date}))})(e)},z=e=>{if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:G},presenterUrl:{enumerable:!0,get:Q}}),h&&document.addEventListener("keydown",(t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())}))};function G(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,W+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function Q(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),m(e)}const Z=e=>{const t=g();return t===l&&e.appendChild(document.createElement("span")),{[s]:z,[c]:Y,[l]:D}[t]},ee=e=>{e.on("activate",(t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach((n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"}))}))},te=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},ne=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{let n=t.fragment?te(p("f")||""):null;((t,n)=>{const{min:r,max:o}=Math,{fragments:a,slides:i}=e,s=o(0,r(t,i.length-1)),c=o(0,r(n||0,a[s].length-1));s===e.slide()&&c===e.fragmentIndex||e.slide(s,{fragment:c})})((()=>{if(location.hash){const[t]=location.hash.slice(1).split(":~:");if(/^\d+$/.test(t))return(te(t)??1)-1;const r=document.getElementById(t)||document.querySelector(`a[name="${CSS.escape(t)}"]`);if(r){const{length:t}=e.slides;for(let o=0;o<t;o+=1)if(e.slides[o].contains(r)){const t=e.fragments?.[o],a=r.closest("[data-marpit-fragment]");if(t&&a){const e=t.indexOf(a);e>=0&&(n=e)}return o}}}return 0})(),n)};e.on("fragment",(({index:e,fragmentIndex:r})=>{n||v({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})})),setTimeout((()=>{o(),window.addEventListener("hashchange",(()=>r((()=>{o({fragment:!1}),v({f:void 0})})))),window.addEventListener("popstate",(()=>{n||r((()=>o()))})),n=!1}),0)}},re=(e={})=>{const t=e.key||window.history.state?.marpBespokeSyncKey||Math.random().toString(36).slice(2),n=`bespoke-marp-sync-${t}`;var r;r={marpBespokeSyncKey:t},v({},{setter:(e,...t)=>i({...e,...r},...t)});const o=()=>{const e=y(n);return e?JSON.parse(e):Object.create(null)},a=e=>{const t=o(),r={...t,...e(t)};return b(n,JSON.stringify(r)),r},s=()=>{window.removeEventListener("pageshow",s),a((e=>({reference:(e.reference||0)+1})))};return e=>{s(),Object.defineProperty(e,"syncKey",{value:t,enumerable:!0});let r=!0;setTimeout((()=>{e.on("fragment",(e=>{r&&a((()=>({index:e.index,fragmentIndex:e.fragmentIndex})))}))}),0),window.addEventListener("storage",(t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),o=JSON.parse(t.newValue);if(n.index!==o.index||n.fragmentIndex!==o.fragmentIndex)try{r=!1,e.slide(o.index,{fragment:o.fragmentIndex,forSync:!0})}finally{r=!0}}}));const i=()=>{const{reference:e}=o();void 0===e||e<=1?w(n):a((()=>({reference:e-1})))};window.addEventListener("pagehide",(e=>{e.persisted&&window.addEventListener("pageshow",s),i()})),e.on("destroy",i)}},{PI:oe,abs:ae,sqrt:ie,atan2:se}=Math,ce={passive:!0},le=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,a=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",(({touches:e})=>{r=1===e.length?a(e[0]):void 0}),ce),o.addEventListener("touchmove",(e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=a(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=ie(ae(n)**2+ae(o)**2),r.radian=se(n,o)}else r=void 0})),o.addEventListener("touchend",(o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+oe)%(2*oe)-oe;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}}),ce)},de=new Map;de.clear(),de.set("none",{backward:{both:void 0,incoming:void 0,outgoing:void 0},forward:{both:void 0,incoming:void 0,outgoing:void 0}});const ue={both:"",outgoing:"outgoing-",incoming:"incoming-"},fe={forward:"",backward:"-backward"},me=e=>`--marp-bespoke-transition-animation-${e}`,ge=e=>`--marp-transition-${e}`,pe=me("name"),ve=me("duration"),he=e=>new Promise((t=>{const n={},r=document.createElement("div"),o=e=>{r.remove(),t(e)};r.addEventListener("animationstart",(()=>o(n))),Object.assign(r.style,{animationName:e,animationDuration:"1s",animationFillMode:"both",animationPlayState:"paused",position:"absolute",pointerEvents:"none"}),document.body.appendChild(r);const a=getComputedStyle(r).getPropertyValue(ge("duration"));a&&(n.defaultDuration=a),((e,t)=>{requestAnimationFrame((()=>{e.style.animationPlayState="running",requestAnimationFrame((()=>t(void 0)))}))})(r,o)})),ye=async e=>de.has(e)?de.get(e):(e=>{const t={},n=[];for(const[r,o]of Object.entries(ue))for(const[a,i]of Object.entries(fe)){const s=`marp-${o}transition${i}-${e}`;n.push(he(s).then((e=>{t[a]=t[a]||{},t[a][r]=e?{...e,name:s}:void 0})))}return Promise.all(n).then((()=>t))})(e).then((t=>(de.set(e,t),t))),be=e=>Object.values(e).flatMap(Object.values).every((e=>!e)),we=(e,{type:t,backward:n})=>{const r=e[n?"backward":"forward"],o=(()=>{const e=r[t],n=e=>({[pe]:e.name});if(e)return n(e);if(r.both){const e=n(r.both);return"incoming"===t&&(e[me("direction")]="reverse"),e}})();return!o&&n?we(e,{type:t,backward:!1}):o||{[pe]:"__bespoke_marp_transition_no_animation__"}},xe=e=>{if(e)try{const t=JSON.parse(e);if((e=>{if("object"!=typeof e)return!1;const t=e;return"string"==typeof t.name&&(void 0===t.duration||"string"==typeof t.duration)})(t))return t}catch{}},ke="_tSId",$e="_tA",Ee="bespoke-marp-transition-warming-up",Le=window.matchMedia("(prefers-reduced-motion: reduce)"),Se="__bespoke_marp_transition_reduced_outgoing__",Pe="__bespoke_marp_transition_reduced_incoming__",_e={forward:{both:void 0,incoming:{name:Pe},outgoing:{name:Se}},backward:{both:void 0,incoming:{name:Pe},outgoing:{name:Se}}},Te=e=>{if(!document.startViewTransition)return;const t=t=>(void 0!==t&&(e._tD=t),e._tD);let n;t(!1),((...e)=>{const t=[...new Set(e).values()];return Promise.all(t.map((e=>ye(e)))).then()})(...Array.from(document.querySelectorAll("section[data-transition], section[data-transition-back]")).flatMap((e=>[e.dataset.transition,e.dataset.transitionBack].flatMap((e=>{const t=xe(e);return[t?.name,t?.builtinFallback?`__builtin__${t.name}`:void 0]})).filter((e=>!!e))))).then((()=>{document.querySelectorAll("style").forEach((e=>{e.innerHTML=e.innerHTML.replace(/--marp-transition-duration:[^;}]*[;}]/g,(e=>e.slice(0,-1)+"!important"+e.slice(-1)))}))}));const r=(n,{back:r,cond:o})=>a=>{const i=t();if(i)return!!a[$e]||!("object"!=typeof i||(i.skipTransition(),!a.forSync));if(!o(a))return!0;const s=e.slides[e.slide()],c=()=>a.back??r,l="data-transition"+(c()?"-back":""),d=s.querySelector(`section[${l}]`);if(!d)return!0;const u=xe(d.getAttribute(l)??void 0);return!u||((async(e,{builtinFallback:t=!0}={})=>{let n=await ye(e);if(be(n)){if(!t)return;return n=await ye(`__builtin__${e}`),be(n)?void 0:n}return n})(u.name,{builtinFallback:u.builtinFallback}).then((e=>{if(!e){t(!0);try{n(a)}finally{t(!1)}return}let r=e;Le.matches&&(console.warn("Use a constant animation to transition because preferring reduced motion by viewer has detected."),r=_e);const o=document.getElementById(ke);o&&o.remove();const i=document.createElement("style");i.id=ke,document.head.appendChild(i),((e,t)=>{const n=[`:root{${ge("direction")}:${t.backward?-1:1};}`,":root:has(.bespoke-marp-inactive){cursor:none;}"],r=t=>{const n=e[t].both?.defaultDuration||e[t].outgoing?.defaultDuration||e[t].incoming?.defaultDuration;return"forward"===t?n:n||r("forward")},o=t.duration||r(t.backward?"backward":"forward");void 0!==o&&n.push(`::view-transition-group(*){${ve}:${o};}`);const a=e=>Object.entries(e).map((([e,t])=>`${e}:${t};`)).join("");return n.push(`::view-transition-old(root){${a(we(e,{...t,type:"outgoing"}))}}`,`::view-transition-new(root){${a(we(e,{...t,type:"incoming"}))}}`),n})(r,{backward:c(),duration:u.duration}).forEach((e=>i.sheet?.insertRule(e)));const s=document.documentElement.classList;s.add(Ee);let l=!1;const d=()=>{l||(n(a),l=!0,s.remove(Ee))},f=()=>{t(!1),i.remove(),s.remove(Ee)};try{t(!0);const e=document.startViewTransition(d);t(e),e.finished.finally(f)}catch(e){console.error(e),d(),f()}})),!1)};e.on("prev",r((t=>e.prev({...t,[$e]:!0})),{back:!0,cond:e=>e.index>0&&!((e.fragment??1)&&n.fragmentIndex>0)})),e.on("next",r((t=>e.next({...t,[$e]:!0})),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout((()=>{e.on("slide",r((t=>e.slide(t.index,{...t,[$e]:!0})),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))}),0),e.on("fragment",(e=>{n=e}))};let Ie;const Me=()=>(void 0===Ie&&(Ie="wakeLock"in navigator&&navigator.wakeLock),Ie),Oe=async()=>{const e=Me();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},Ae=async()=>{if(!Me())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&Oe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await Oe(),e};((e=document.getElementById(":$p"))=>{(()=>{const e=p("view");a.dataset.bespokeView=e===l||e===c?e:""})();const t=(e=>{const t=p(e);return v({[e]:void 0}),t})("sync")||void 0;o.from(e,((...e)=>{const t=d.findIndex((e=>g()===e));return e.map((([e,n])=>e[t]&&n)).filter((e=>e))})([[1,1,0],re({key:t})],[[1,1,1],Z(e)],[[1,1,0],M],[[1,1,1],k],[[1,0,0],T()],[[1,1,1],O],[[1,1,1],ne({history:!1})],[[1,1,0],A()],[[1,1,0],P],[[1,0,0],ee],[[1,1,0],le()],[[1,0,0],C()],[[1,0,0],Te],[[1,1,1],$],[[1,1,0],Ae]))})()}();</script></body></html>

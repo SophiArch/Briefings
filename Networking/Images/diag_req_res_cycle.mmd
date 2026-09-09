@@ -1,0 +1,8 @@
+sequenceDiagram
+    participant C as Browser (Client)
+    participant S as Web Server
+
+    C->>S: GET /users/42 HTTP/1.1<br/>Host: api.example.com<br/>Accept: application/json
+    Note right of S: Server looks up<br/>user 42 in database
+    S-->>C: HTTP/1.1 200 OK<br/>Content-Type: application/json<br/><br/>{ "id": 42, "name": "Ada" }
+    Note left of C: Browser parses JSON<br/>and updates the page

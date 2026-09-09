@@ -1,0 +1,15 @@
+flowchart LR
+    R["/users/42<br/>(a resource)"]
+
+    G["GET<br/>read"] --> R
+    P["POST /users<br/>create"] --> R
+    U["PUT / PATCH<br/>update"] --> R
+    D["DELETE<br/>remove"] --> R
+
+    style R fill:#bd93f9,stroke:#f8f8f2,color:#282a36,stroke-width:2px
+    style G fill:#50fa7b,stroke:#f8f8f2,color:#282a36,stroke-width:2px
+    style P fill:#8be9fd,stroke:#f8f8f2,color:#282a36,stroke-width:2px
+    style U fill:#ffb86c,stroke:#f8f8f2,color:#282a36,stroke-width:2px
+    style D fill:#ff5555,stroke:#f8f8f2,color:#282a36,stroke-width:2px
+
+    linkStyle default stroke:#f8f8f2,stroke-width:2px
