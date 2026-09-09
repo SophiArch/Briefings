@@ -4,6 +4,8 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 README_PATH = REPO_ROOT / "README.md"
+FRONT_PATH = REPO_ROOT / "front.md"
+BOTTOM_PATH = REPO_ROOT / "bottom.md"
 PAGES_BASE_URL = "https://sophiarch.github.io/Briefings"
 
 EXCLUDED_DIR_NAMES = {".venv", ".git", "node_modules", "Scripts"}
@@ -27,7 +29,7 @@ def build_readme(html_files: list[Path]) -> str:
 
     lines = []
     for folder in sorted(sections):
-        lines.append(f"# {folder}")
+        lines.append(f"## {folder}")
         for path in sections[folder]:
             relative_path = path.relative_to(REPO_ROOT).as_posix()
             lines.append(f"- [{path.name}]({PAGES_BASE_URL}/{relative_path})")
@@ -38,7 +40,10 @@ def build_readme(html_files: list[Path]) -> str:
 
 def main() -> None:
     html_files = find_html_files()
-    README_PATH.write_text(build_readme(html_files))
+    front = FRONT_PATH.read_text().rstrip("\n")
+    index = build_readme(html_files)
+    bottom = BOTTOM_PATH.read_text().rstrip("\n")
+    README_PATH.write_text(f"{front}\n\n{index}\n\n{bottom}\n")
 
 
 if __name__ == "__main__":
