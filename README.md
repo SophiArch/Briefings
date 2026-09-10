@@ -10,6 +10,7 @@ Short, focused write-ups on AI/ML, Data Analytics, Data Science, and technology 
 - [Hugging_Face_Incident.html](https://sophiarch.github.io/Briefings/Cybersecurity/Hugging_Face_Incident.html)
 
 ## Development
+- [Docker.html](https://sophiarch.github.io/Briefings/Development/Docker.html)
 - [Python_Dotenv.html](https://sophiarch.github.io/Briefings/Development/Python_Dotenv.html)
 - [Python_Virtual_Environments.html](https://sophiarch.github.io/Briefings/Development/Python_Virtual_Environments.html)
 - [uv.html](https://sophiarch.github.io/Briefings/Development/uv.html)

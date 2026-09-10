@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1558" height="664" viewBox="0 0 1558 664">
+  <rect x="0" y="0" width="1558" height="664" fill="#282a36"/>
+  <text x="382.0" y="74.0" fill="#f8f8f2" font-size="30" font-family="Helvetica, Arial, sans-serif" text-anchor="middle" font-weight="700">Virtual Machines</text>
+  <text x="1176.0" y="74.0" fill="#f8f8f2" font-size="30" font-family="Helvetica, Arial, sans-serif" text-anchor="middle" font-weight="700">Containers</text>
+  <rect x="40.0" y="536.0" width="684.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#bd93f9" stroke-width="2.5"/>
+  <text x="382.0" y="588.4" fill="#f8f8f2" font-size="24" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">Infrastructure</text>
+  <rect x="40.0" y="448.0" width="684.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#ff79c6" stroke-width="2.5"/>
+  <text x="382.0" y="500.4" fill="#f8f8f2" font-size="24" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">Host Operating System</text>
+  <rect x="40.0" y="360.0" width="684.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#8be9fd" stroke-width="2.5"/>
+  <text x="382.0" y="412.4" fill="#f8f8f2" font-size="24" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">Hypervisor</text>
+  <rect x="40.0" y="272.0" width="220.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#f8f8f2" stroke-width="2.5"/>
+  <text x="150.0" y="323.7" fill="#f8f8f2" font-size="22" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">Guest OS</text>
+  <rect x="272.0" y="272.0" width="220.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#f8f8f2" stroke-width="2.5"/>
+  <text x="382.0" y="323.7" fill="#f8f8f2" font-size="22" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">Guest OS</text>
+  <rect x="504.0" y="272.0" width="220.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#f8f8f2" stroke-width="2.5"/>
+  <text x="614.0" y="323.7" fill="#f8f8f2" font-size="22" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">Guest OS</text>
+  <rect x="40.0" y="184.0" width="220.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#f1fa8c" stroke-width="2.5"/>
+  <text x="150.0" y="235.7" fill="#f8f8f2" font-size="22" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">Bins / Libs</text>
+  <rect x="272.0" y="184.0" width="220.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#f1fa8c" stroke-width="2.5"/>
+  <text x="382.0" y="235.7" fill="#f8f8f2" font-size="22" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">Bins / Libs</text>
+  <rect x="504.0" y="184.0" width="220.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#f1fa8c" stroke-width="2.5"/>
+  <text x="614.0" y="235.7" fill="#f8f8f2" font-size="22" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">Bins / Libs</text>
+  <rect x="40.0" y="96.0" width="220.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#50fa7b" stroke-width="2.5"/>
+  <text x="150.0" y="147.7" fill="#f8f8f2" font-size="22" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">App A</text>
+  <rect x="272.0" y="96.0" width="220.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#50fa7b" stroke-width="2.5"/>
+  <text x="382.0" y="147.7" fill="#f8f8f2" font-size="22" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">App B</text>
+  <rect x="504.0" y="96.0" width="220.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#50fa7b" stroke-width="2.5"/>
+  <text x="614.0" y="147.7" fill="#f8f8f2" font-size="22" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">App C</text>
+  <rect x="834.0" y="536.0" width="684.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#bd93f9" stroke-width="2.5"/>
+  <text x="1176.0" y="588.4" fill="#f8f8f2" font-size="24" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">Infrastructure</text>
+  <rect x="834.0" y="448.0" width="684.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#ff79c6" stroke-width="2.5"/>
+  <text x="1176.0" y="500.4" fill="#f8f8f2" font-size="24" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">Host Operating System</text>
+  <rect x="834.0" y="360.0" width="684.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#8be9fd" stroke-width="2.5"/>
+  <text x="1176.0" y="412.4" fill="#f8f8f2" font-size="24" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">Docker Engine</text>
+  <rect x="834.0" y="272.0" width="220.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#f1fa8c" stroke-width="2.5"/>
+  <text x="944.0" y="323.7" fill="#f8f8f2" font-size="22" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">Bins / Libs</text>
+  <rect x="1066.0" y="272.0" width="220.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#f1fa8c" stroke-width="2.5"/>
+  <text x="1176.0" y="323.7" fill="#f8f8f2" font-size="22" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">Bins / Libs</text>
+  <rect x="1298.0" y="272.0" width="220.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#f1fa8c" stroke-width="2.5"/>
+  <text x="1408.0" y="323.7" fill="#f8f8f2" font-size="22" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">Bins / Libs</text>
+  <rect x="834.0" y="184.0" width="220.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#50fa7b" stroke-width="2.5"/>
+  <text x="944.0" y="235.7" fill="#f8f8f2" font-size="22" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">App A</text>
+  <rect x="1066.0" y="184.0" width="220.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#50fa7b" stroke-width="2.5"/>
+  <text x="1176.0" y="235.7" fill="#f8f8f2" font-size="22" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">App B</text>
+  <rect x="1298.0" y="184.0" width="220.0" height="88.0" rx="8" fill="#3a3d4d" stroke="#50fa7b" stroke-width="2.5"/>
+  <text x="1408.0" y="235.7" fill="#f8f8f2" font-size="22" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">App C</text>
+</svg>
