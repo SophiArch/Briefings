@@ -363,6 +363,80 @@ Content-Type: application/json
 
 ---
 
+# Testing APIs Without Code — Postman
+
+- **Postman**: a GUI app for building, sending, and inspecting HTTP requests
+  - [www.postman.com](https://www.postman.com) — free desktop app or web version
+- No code needed — pick a method, type a URL, hit **Send**
+- Great for **exploring** an API before writing a single line of Python
+- Also useful for: saving requests in **collections**, sharing with teammates, generating docs
+
+<!--
+⏱️ Slide Timing: 2 min
+
+- Frame Postman as the "training wheels" step — see the request/response shape visually before writing `requests` code
+- Every concept covered so far (method, URL, headers, status, body) maps directly onto a labeled field in the Postman UI
+-->
+
+---
+
+# Anatomy of a Postman Request
+
+![center width:850](Images/diag_postman_anatomy.svg)
+
+<!--
+⏱️ Slide Timing: 4 min
+
+- Top bar: method dropdown + URL bar + Send button — literally `requests.get(url)` as a UI
+- Tabs (Params / Authorization / Headers / Body) are exactly the pieces from earlier slides, just in dedicated boxes instead of a raw HTTP request
+- Bottom panel: status, time, size, then the parsed JSON body — the same information as `response.status_code`, `response.elapsed`, `response.json()`
+❓ Ask: "Which tab would you click to add an Authorization header for an API key?"
+-->
+
+---
+
+# Sending Requests in Postman
+
+**A GET request**
+1. Click `New` → `HTTP`, select **GET**
+2. Enter URL: `https://jsonplaceholder.typicode.com/posts/1`
+3. Click **Send** → inspect the response panel
+
+**A POST request**
+1. Change method to **POST**, same base URL without `/1`
+2. `Body` tab → `raw` → `JSON`, enter `{ "title": "Hello", "userId": 1 }`
+3. Click **Send** → expect `201 Created`
+
+<!--
+⏱️ Slide Timing: 4 min
+
+- Live-demo both if time allows — GET first to build confidence, then POST to show the Body tab
+- Point out the method-color convention: GET is green, POST is orange/yellow in Postman — same visual language across the tool
+-->
+
+---
+
+# Postman Environment Variables
+
+- Store secrets (API keys, base URLs) as **variables** instead of hardcoding them in requests
+- Click **Environments** (top-right) → `+` → add a variable, e.g. `HF_TOKEN` (type: `secret`)
+- Reference it anywhere with double curly braces:
+
+```
+Authorization: Bearer {{HF_TOKEN}}
+```
+
+> Same idea as `os.environ["API_TOKEN"]` in Python — never paste a real key directly into a request
+
+<!--
+⏱️ Slide Timing: 3 min
+
+- Directly mirrors the "never hardcode keys" pitfall from the Python auth slide — same discipline, different tool
+- Switching environments (e.g. dev vs. prod) is just a dropdown — one more reason teams standardize on this instead of hardcoded values
+-->
+
+---
+
 # Calling an API from Python
 
 ```python
@@ -573,6 +647,7 @@ response.raise_for_status()
 | **`requests` library docs** | Reitz, K. (2026). [Requests: HTTP for Humans](https://requests.readthedocs.io/). |
 | **HTTP status codes reference** | Mozilla. (2026). [HTTP response status codes — MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status). |
 | **Test API for practice** | typicode. (2026). [JSONPlaceholder — Free fake API for testing](https://jsonplaceholder.typicode.com/). |
+| **Postman documentation** | Postman, Inc. (2026). [Postman Learning Center](https://learning.postman.com/). |
 
 <!--
 ⏱️ Slide Timing: 1 min

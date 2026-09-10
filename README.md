@@ -14,6 +14,9 @@ Short, focused write-ups on AI/ML, Data Analytics, Data Science, and technology 
 - [Python_Virtual_Environments.html](https://sophiarch.github.io/Briefings/Development/Python_Virtual_Environments.html)
 - [uv.html](https://sophiarch.github.io/Briefings/Development/uv.html)
 
+## Networking
+- [HTTP_and_REST_APIs.html](https://sophiarch.github.io/Briefings/Networking/HTTP_and_REST_APIs.html)
+
 ## Statistics
 - [Anscombes_Quartet.html](https://sophiarch.github.io/Briefings/Statistics/Anscombes_Quartet.html)
 - [Simpsons_Paradox.html](https://sophiarch.github.io/Briefings/Statistics/Simpsons_Paradox.html)
