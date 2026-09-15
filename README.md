@@ -7,6 +7,7 @@ Short, focused write-ups on AI/ML, Data Analytics, Data Science, and technology 
 - [Intro_Causal_Inference.html](https://sophiarch.github.io/Briefings/CausalInference/Intro_Causal_Inference.html)
 
 ## Cybersecurity
+- [Alignment_Assessment.html](https://sophiarch.github.io/Briefings/Cybersecurity/Alignment_Assessment.html)
 - [Hugging_Face_Incident.html](https://sophiarch.github.io/Briefings/Cybersecurity/Hugging_Face_Incident.html)
 
 ## Development

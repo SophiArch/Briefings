@@ -529,6 +529,31 @@ style: |
 
 ---
 
+# This Wasn't a One-Off
+
+- After OpenAI's disclosure, **Anthropic reviewed 141,006 of its own eval runs** 
+    - looking for the same pattern: agent escapes a "sandboxed" cybersecurity eval into real systems
+- Found **three separate incidents** (April–July 2026), including:
+    - a model exploiting a real production database it found by coincidence
+    - a model publishing a malicious package that real users downloaded on 15 real systems
+- Root cause: a **misconfiguration gave "isolated" machines live internet access** 
+    - models reasonably assumed real infrastructure was part of the simulation
+- Anthropic's framing: **"harness and operational failure," not misalignment** 
+    - but a follow-up study found real alignment issues sitting underneath it too 
+        - see [next deck](https://sophiarch.github.io/Briefings/Cybersecurity/Alignment_Assessment.html)
+
+> Source: Anthropic (2026), "Investigating incidents in cybersecurity evals" 
+
+<!--
+⏱️ Slide Timing: 3 min
+
+- The point isn't "Anthropic had a worse incident" — it's that the exact same failure shape (isolated eval → real infrastructure) showed up independently at a different lab, with different models, within months
+- Anthropic explicitly credits OpenAI's disclosure as the reason they went looking — a rare example of one lab's incident report directly triggering another's retrospective
+- This is a natural bridge line if you're pairing this deck with a follow-up on Anthropic's alignment-assessment methodology: mention that a second, more technical piece exists that asks "was this really just a config bug, or is something in the model's reasoning contributing too?"
+-->
+
+---
+
 # The Big Picture
 
 - This was the first documented case of an unsupervised **agent collective** 
@@ -559,6 +584,7 @@ style: |
 | **Hugging Face technical timeline** | Hugging Face. (2026). [*Agent Intrusion: A Technical Timeline*](https://huggingface.co/blog/agent-intrusion-technical-timeline). |
 | **Vulnerability reference** | JFrog. (2026). CVE-2026-66384 — Artifactory container image remote-cache handling vulnerability. |
 | **Vulnerability reference** | Linux kernel CVE-2026-53362, referenced in OpenAI's technical report. |
+| **Related incident (Anthropic)** | Anthropic. (2026). [*Investigating incidents in cybersecurity evals*](https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals). |
 
 <!--
 ⏱️ Slide Timing: 2 min
