@@ -11,11 +11,11 @@ Students review its work like a pull request, find the leakage, and rewrite the 
 | `briefs/brief_v1.md` | The one-line brief for the live demo, and why it is weak |
 | `briefs/brief_v2.md` | A brief written like a spec (goal, evidence rules, deliverables, escalation) |
 | `review_checklist.md` | Student checklist: reproduce, data, split, metrics, claims, verdict |
-| `agent_v1_output.ipynb` | Fallback "agent output" to review. A reconstruction of typical agent work, written for this class; numbers are real |
+| `agent_v1_output.ipynb` | Fallback "agent output" to review. A reconstruction of typical agent work, written for teaching; numbers are real |
 | `reference_review.ipynb` | Instructor answer key: duplicates, baseline, card-level leakage, business metric |
 | `../Images/` | Diagrams used in the deck |
 
-Both notebooks load the Milestone 8 `fraud_dataset.csv` from GitHub, so they run in Colab with no setup.
+Both notebooks load a public credit-card fraud sample (`fraud_dataset.csv`) from GitHub, so they run in Colab with no setup.
 
 ## Instructor prep
 
@@ -34,4 +34,4 @@ Both notebooks load the Milestone 8 `fraud_dataset.csv` from GitHub, so they run
 
 - 2,847 duplicate rows, all fraud; 86% of test frauds have a twin in training
 - Median 10 fraud transactions per compromised card; 99% of test fraud cards also appear as fraud in training under a random split
-- Honest result still beats the ABC Bank goal (≥ 80% of fraud by value), but the agent's evidence and claims were wrong
+- Honest result still beats the business goal (≥ 80% of fraud by value), but the agent's evidence and claims were wrong

@@ -87,7 +87,7 @@ style: |
 ⏱️ Slide Timing: 3 min
 
 - Students have probably used a chat assistant for snippets; agents differ because they execute and iterate
-- Fabric and Azure ML (used in M3, M8–M11) are adding these agents into the same notebooks students used
+- Platforms such as Fabric and Azure ML are adding these agents into the notebooks data teams already use
 - METR measures task length at 50% success; long tasks are exactly where silent mistakes pile up
 -->
 
@@ -140,9 +140,9 @@ style: |
 ⏱️ Slide Timing: 4 min
 
 - None of these raise an error; the notebook is green all the way down
-- Every row is something students already learned to catch in M8–M11
+- Every row is a classic data science mistake that a careful reviewer learns to catch
 - Specification gaming is documented in agent research: agents optimise the signal you give them
-❓ Ask: "Which of these would YOU have caught in Milestone 8 without being told about the duplicates?"
+❓ Ask: "Which of these would YOU have caught in your last model, without being told where to look?"
 -->
 
 ---
@@ -155,11 +155,29 @@ style: |
 - Vague brief + confident agent = **a precise answer to the wrong question**
 
 <!--
-⏱️ Slide Timing: 2 min
+⏱️ Slide Timing: 1 min
 
-- Same issue as M1 SMART goals: "stop fraud" vs "flag 80% by value in back-testing"
+- Same issue as vague project goals: "stop fraud" vs "flag 80% by value in back-testing"
 - Agent didn't misbehave; it did exactly what was asked
 - Fix starts with the brief, not with a better agent
+-->
+
+---
+
+# Scenario: Fraud Detection for a Retail Bank
+
+- Fraud team reviews card transactions by hand, one row at a time
+- Business goal: **flag at least 80% of confirmed fraud by dollar value**
+  - with few enough false alerts for analysts to review
+- Data: a public credit-card fraud sample, 8,262 transactions, label `is_fraud`
+- Task for the agent: build the model and report how good it is
+
+<!--
+⏱️ Slide Timing: 2 min
+
+- The goal is stated in business terms on purpose: dollars caught, analyst workload
+- Watch whether that goal ever reaches the agent; it is not in the one-line brief
+- The dataset is synthetic (simulated transactions), which matters later
 -->
 
 ---
@@ -170,7 +188,7 @@ style: |
 Build a fraud detection model on fraud_dataset.csv and tell me how accurate it is.
 ```
 
-- Dataset: the Milestone 8 fraud file (8,262 transactions)
+- Dataset: the fraud sample from the scenario (link in the brief)
 - Agent: whichever you have (Claude Code, Copilot agent mode, Colab, Fabric)
 - Watch for: what it checks, what it drops, how it splits, what it claims
 - Fallback: `agent_review_lab/agent_v1_output.ipynb` has a typical run, already executed
@@ -255,7 +273,7 @@ Build a fraud detection model on fraud_dataset.csv and tell me how accurate it i
 <!--
 ⏱️ Slide Timing: 3 min
 
-- Same trap as M8, and it still catches people (and agents) who've seen it before
+- A classic trap, and it still catches people (and agents) who've seen it before
 - Stratified split does not help: it balances labels, it doesn't separate copies
 - Teaching point: check IDs before dropping them; they are your duplicate detector
 -->
@@ -357,7 +375,7 @@ Build a fraud detection model on fraud_dataset.csv and tell me how accurate it i
 - Review it with the same checklist: **better brief ≠ skip the review**
 
 <!--
-⏱️ Slide Timing: 4 min
+⏱️ Slide Timing: 3 min
 
 - If time is short, start the run before the previous slide and come back to it
 - Expect better but not perfect; point out anything still missed
@@ -380,7 +398,7 @@ Build a fraud detection model on fraud_dataset.csv and tell me how accurate it i
 
 - Checkpoints are the cheapest fix: most failures happen in the first 10 minutes of a run
 - Part 1 connection: an agent reviewing an agent is just an LLM judge; it needs calibration too
-- Least privilege echoes the M7 never-rules: decide what the agent must never do before it runs
+- Least privilege is the agent's never-rules: decide what it must never do before it runs
 -->
 
 ---
@@ -399,8 +417,8 @@ Build a fraud detection model on fraud_dataset.csv and tell me how accurate it i
 <div>
 
 ###### Matters more
-- **Problem framing:** tie work to business value (M1)
-- **Evaluation:** baselines, leakage, right metric (M8–M11)
+- **Problem framing:** tie work to business value
+- **Evaluation:** baselines, leakage, right metric
 - **Domain knowledge:** "real fraud isn't 50%"
 - **Review and communication:** defend a number to stakeholders
 
@@ -412,7 +430,7 @@ Build a fraud detection model on fraud_dataset.csv and tell me how accurate it i
 <!--
 ⏱️ Slide Timing: 4 min
 
-- Reassure: every "matters more" skill is something this course spent 12 milestones on
+- Reassure: every "matters more" skill is learnable, and is where good data science training already spends its time
 - Interviews are shifting: "here is an agent's notebook, what's wrong with it?" is a realistic exercise
 - Juniors who can review agent output are more valuable than juniors who only produce it
 -->

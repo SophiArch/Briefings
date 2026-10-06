@@ -1,6 +1,6 @@
 # Evaluating LLMs & Agents (extra session, part 1 of 2)
 
-Builds an evaluation harness for the Milestone 12 knowledge-grounded assistant, and asks
+Builds an evaluation harness for a bank's document-grounded customer assistant, and asks
 "which grader can we trust, and how do we know?"
 
 ## Contents
@@ -9,7 +9,7 @@ Builds an evaluation harness for the Milestone 12 knowledge-grounded assistant, 
 |------|------------|
 | `../Evaluating_LLMs_and_Agents.md` | Marp deck with speaker notes and timings (~88 min, plus a 10-min break slide) |
 | `llm_eval_harness.ipynb` | Student lab: exact match → rules → similarity → LLM judge → agreement with humans → release gate |
-| `data/eval_testset.csv` | 26 cases from the M12 test set (A01–A17, R1–R5, W1–W4) with reference answers, must / must-not rules, sources, dev/test split |
+| `data/eval_testset.csv` | 26 test cases: answerable (A01–A17), must refuse (R1–R5), withheld documents (W1–W4) with reference answers, must / must-not rules, sources, dev/test split |
 | `data/agent_responses.csv` | Responses from two builds: **v1** (superseded docs indexed, no refusal rules) and **v2** (after audit and instructions) |
 | `data/human_labels.csv` | Instructor pass/fail labels and failure modes (ground truth) |
 | `data/judge_cache.csv` | Sample LLM-judge verdicts for offline use. Written for teaching (illustrative, not captured from a model run), with 4 deliberate disagreements |

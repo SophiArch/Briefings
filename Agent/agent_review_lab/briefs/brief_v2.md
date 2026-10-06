@@ -5,7 +5,7 @@ note that it never mentions duplicates or card-level leakage by name.
 
 ```text
 ## Context
-You are helping ABC Bank's Security/Fraud team. Today fraud is assessed by analysts reading
+You are helping a retail bank's Security/Fraud team. Today fraud is assessed by analysts reading
 transaction rows one at a time. Dataset (one row per card transaction, label = is_fraud):
 https://raw.githubusercontent.com/JasonL888/AI_Experiments/refs/heads/main/Datasets/fraud_dataset.csv
 

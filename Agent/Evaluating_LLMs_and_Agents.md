@@ -65,7 +65,7 @@ style: |
 <!--
 ⏱️ Slide Timing: 1 min
 
-- Extra-curricular session: all 12 milestones done, so tonight is about the skills around them
+- Two-part session on the skills around building GenAI: evaluating it, and supervising it
 - Part 1 answers a question every GenAI team struggles with
   - "how do we KNOW the agent is good?"
 - Part 2 flips it: an AI agent does the data science, and you are the reviewer
@@ -78,7 +78,7 @@ style: |
 | Time | Block |
 |------|-------|
 | 0:00 – 0:45 | **Part 1 concepts:** why evals, what to measure, four kinds of grader |
-| 0:45 – 1:20 | **Lab:** build an eval harness for the Milestone 12 assistant |
+| 0:45 – 1:20 | **Lab:** build an eval harness for a bank's document-grounded assistant |
 | 1:20 – 1:28 | Debrief and takeaways |
 | 1:28 – 1:38 | Break |
 | 1:38 – 2:55 | **Part 2:** AI agent as data scientist (live demo, review, rewrite the brief) |
@@ -89,9 +89,9 @@ style: |
 <!--
 ⏱️ Slide Timing: 2 min
 
-- Both parts reuse things students built
-  - Part 1: M12 knowledge-grounded assistant and its test set
-  - Part 2: M8 fraud dataset
+- Both parts use realistic scenarios
+  - Part 1: a bank's document-grounded customer assistant and its test set
+  - Part 2: a public credit-card fraud dataset
 - Lab notebooks run offline on fixed data, so a flaky Wi-Fi or expired Azure lab won't stop anyone
 - Optional: students with an Anthropic or Foundry key can switch on a live judge
 -->
@@ -101,7 +101,7 @@ style: |
 # "It Worked When I Tried It"
 
 - Most teams test GenAI by **vibes**: ask five questions, eyeball the answers, ship
-- You ran ~26 test questions by hand in Milestone 12. Now imagine:
+- You tested your assistant with ~26 questions by hand. Now imagine:
   - the model version changes next month
   - someone uploads Fee Schedule v7.0
   - a colleague "improves" the instructions
@@ -113,13 +113,33 @@ style: |
 
 - Analogy: unit tests for software; nobody re-clicks every button after each commit
 - GenAI breaks silently: no stack trace, just a confident wrong answer
-- M12 audit found fee schedule v5.4 vs v6.1: exactly the kind of regression evals catch
-❓ Ask: "How did you decide your Milestone 12 assistant was good enough to hand over?"
+- In tonight's scenario, an old fee schedule left in the index quotes superseded fees: exactly the regression evals catch
+❓ Ask: "How did you decide the last chatbot or assistant you built was good enough to ship?"
 -->
 
 ---
 
-# Why LLM Evaluation Is Harder Than Milestone 8
+# Scenario: A Bank's Product & Policy Assistant
+
+- Customer-facing assistant grounded on **9 product and policy documents**
+  - fee schedule, product sheets, terms and conditions, branch hours, privacy notice
+- **3 documents must never be used**
+  - superseded fee schedule v5.4 (old fees: fall-below fee $5.00, now $2.00)
+  - internal loan policy and complaint procedure
+- Must cite document, version and effective date on every answer
+- Must refuse 5 kinds of question: specific transaction, advice, eligibility, action, not in documents
+
+<!--
+⏱️ Slide Timing: 2 min
+
+- A realistic retrieval-augmented (RAG) assistant: the kind most GenAI teams build first
+- The traps are realistic too: old document versions and internal documents left in the index
+- Every example on the following slides comes from this one scenario
+-->
+
+---
+
+# Why LLM Evaluation Is Harder Than Classic ML
 
 | | Classic ML (fraud, loans) | LLM / agent |
 |---|---|---|
@@ -134,7 +154,7 @@ style: |
 <!--
 ⏱️ Slide Timing: 3 min
 
-- Students already know the hard part from M8–M11: test sets, leakage, wrong metrics
+- Anyone who has built a classifier already knows the hard part: test sets, leakage, wrong metrics
 - What is new: deciding whether text is "correct" needs its own grader
 - Non-determinism means running a case once proves little
   - production teams run each case several times and track pass rate
@@ -154,7 +174,7 @@ style: |
 <!--
 ⏱️ Slide Timing: 3 min
 
-- Map each to M12: citation rule (Steps 3–4), five refusals, withheld docs W1–W4
+- Map each to the scenario: citation rule, five refusal categories, withheld docs W1–W4
 - Refusal correctness cuts both ways
   - over-refusing ("I can't help with that") also fails customers
 - Prioritise: safety failures block release; style issues don't
@@ -192,7 +212,7 @@ style: |
 <!--
 ⏱️ Slide Timing: 3 min
 
-- Students' M12 Step 5 table is already 80% of an eval set
+- A test plan written for user acceptance testing is already 80% of an eval set
 - must_not_include is the most valuable column: $5.00, 0.55, "transferred"
 - Start small (20–50 cases), grow it from real failures in production
 -->
@@ -237,7 +257,7 @@ style: |
 
 # Graders 1–2: Exact Match and Rule Checks
 
-- Copilot Studio's test set template offers **exact match, text match, meaning match** (see your Milestone 7 CSV)
+- Copilot Studio's test set template offers **exact match, text match, meaning match** (test set import template)
 - **Exact match:** 0 of 52 lab responses pass, even the correct ones
 - **Rules** you write in code:
   - `must_include` → `"$2.00" in response`
@@ -273,7 +293,7 @@ similarity("$2.00 per month", "$5.00 per month")   # 1.0
 ⏱️ Slide Timing: 3 min
 
 - The default TF-IDF tokeniser drops single characters, so the digit vanishes
-- Ties back to M11: n-gram features see words, not meaning or numbers
+- Same limitation as n-gram text classifiers: they see words, not meaning or numbers
 - "Meaning match" tools are useful for a first filter, never as the only grader for facts
 -->
 
@@ -352,7 +372,7 @@ verdict = msg.parsed_output
 
 - Hand-label a sample (pass/fail)
 - Treat each grader as a **classifier** of the human label
-- Confusion matrix, as in Milestone 8
+- Confusion matrix, as for any classifier
 - **Cohen's κ**: agreement corrected for chance
   - 0.61–0.80 substantial
   - 0.81–1.00 almost perfect
@@ -387,7 +407,7 @@ verdict = msg.parsed_output
 # Evaluating Agents, Not Just Answers
 
 - An agent's **trajectory** matters, not only its final message
-  - Did it pick the right tool (M7 lookup action)?
+  - Did it pick the right tool (e.g. a record-lookup action)?
   - Were the arguments right (`LA2031988`, not a guess)?
   - Did it respect the never-rules before acting?
   - Did it finish the task, or stop early?
@@ -430,9 +450,9 @@ verdict = msg.parsed_output
 > Tools change every quarter; test sets, rubrics and human calibration carry over
 
 <!--
-⏱️ Slide Timing: 2 min
+⏱️ Slide Timing: 1 min
 
-- Students already have Foundry access from M12, so the azure-ai-evaluation SDK is the natural next step
+- Teams already on Azure AI Foundry can add the azure-ai-evaluation SDK with no new infrastructure
 - Ragas is worth a look for RAG specifically: context precision and recall measure retrieval, not just answers
 - Building it by hand once makes every tool's dashboard easier to read
 -->
@@ -442,7 +462,7 @@ verdict = msg.parsed_output
 # Lab: Build an Eval Harness (35 min)
 
 - Open `eval_lab/llm_eval_harness.ipynb` (Colab badge at the top)
-- Data: 26 cases × 2 builds of the M12 assistant = 52 responses
+- Data: 26 cases × 2 builds of the bank assistant = 52 responses
   - **v1:** superseded docs indexed, no refusal rules
   - **v2:** after the document audit and instructions
 - Work through grading: exact → rules → similarity → judge
@@ -486,7 +506,7 @@ verdict = msg.parsed_output
 > A big improvement still isn't automatically "good enough"; the threshold is a business decision
 
 <!--
-⏱️ Slide Timing: 4 min
+⏱️ Slide Timing: 3 min
 
 - Ask pairs for the most surprising disagreement between their labels and the key
 - Discuss: is 90% the right bar for a customer-facing bank assistant? What about critical failures?
@@ -527,7 +547,7 @@ verdict = msg.parsed_output
 <!--
 ⏱️ Slide Timing: 1 min
 
-- Bookmark first: Azure AI Evaluation SDK, since it plugs straight into the Foundry project from M12
+- Bookmark first: Azure AI Evaluation SDK, since it plugs straight into an existing Foundry project
 - Anthropic's eval guide is short and vendor-neutral in its advice on writing test cases
 -->
 

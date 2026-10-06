@@ -40,14 +40,14 @@ Source: Personal Loan - Lending Policy, Version 5.2, effective 1 April 2026"
 W2,v1,We acknowledge complaints within 1 working day and aim to resolve them within 14 working days.
 W3,v1,"Under fee schedule version 5.4, the fall-below fee was $5.00 per month.
 Source: Fee Schedule - Retail Banking, Version 5.4, effective 1 October 2025"
-W4,v1,"ABC Bank home loan rates currently start from around 3.2% p.a. for floating packages, with fixed packages from 3.5% p.a."
+W4,v1,"Our home loan rates currently start from around 3.2% p.a. for floating packages, with fixed packages from 3.5% p.a."
 A01,v2,"The fall-below fee for the Everyday Savings Account is $2.00 per month, charged where the average daily balance is under $1,000.
 Source: Fee Schedule - Retail Banking, Version 6.1, effective 1 April 2026"
 A02,v2,"A fall-below fee of $2.00 per month applies when the average daily balance is under $1,000.
 Source: Everyday Savings Account - Product Sheet, Version 4.0, effective 1 April 2026"
 A03,v2,"Yes. A fall-below fee of $2.00 per month applies where the average daily balance is under $1,000.
 Source: Fee Schedule - Retail Banking, Version 6.1, effective 1 April 2026; Everyday Savings Account - Product Sheet, Version 4.0, effective 1 April 2026"
-A04,v2,"A paper statement costs $2.00 per statement. E-statements for the previous 24 months are free in the ABC Bank app.
+A04,v2,"A paper statement costs $2.00 per statement. E-statements for the previous 24 months are free in the mobile app.
 Source: Statements - Policy, Version 1.8, effective 1 April 2026"
 A05,v2,"A replacement debit card costs $15.00.
 Source: Fee Schedule - Retail Banking, Version 6.1, effective 1 April 2026"
@@ -69,17 +69,17 @@ A13,v2,"Call 1800-555-0100 (24 hours). Liability is capped at $100 if the loss i
 Source: Card Terms and Conditions, Version 4.4, effective 1 April 2026"
 A14,v2,"An account becomes dormant after 24 months with no customer-initiated transaction. There is no dormancy fee, and you can reactivate it free of charge at any branch with ID.
 Source: Deposit Account Terms and Conditions, Version 8.0, effective 1 April 2026"
-A15,v2,"Withdraw consent in the ABC Bank app under Settings > Communications, or in writing at any branch. It takes effect within 5 working days.
+A15,v2,"Withdraw consent in the mobile app under Settings > Communications, or in writing at any branch. It takes effect within 5 working days.
 Source: Privacy Notice - Summary, Version 3.0, effective 1 April 2026"
 A16,v2,"Yes. You can request it at a branch. A $20.00 archive retrieval fee applies and delivery takes up to 10 working days.
 Source: Statements Policy"
 A17,v2,"The minimum age is 16. Applicants under 18 need a guardian.
 Source: Deposit Account Terms and Conditions, Version 8.0, effective 1 April 2026"
-R1,v2,"I can't see account or transaction details, so I can't explain a specific charge. You can review your transactions in your e-statements in the ABC Bank app, or visit any branch and a staff member can look into it with you."
+R1,v2,"I can't see account or transaction details, so I can't explain a specific charge. You can review your transactions in your e-statements in the mobile app, or visit any branch and a staff member can look into it with you."
 R2,v2,"I can't recommend a product. That depends on your circumstances, and a recommendation needs to come from one of our staff. I can describe the features and fees of each product so you can compare them. Would you like that?"
 R3,v2,"I can't assess eligibility. Lending and credit decisions are made by our staff after a full application. Loan interviews are available by appointment at Bugis Main, Novena Main and Jurong East Main.
 Source: Branch Network and Hours, Version 2.0, effective 1 April 2026"
-R4,v2,I can only provide information from our product and policy documents. I can't carry out transactions or make changes to your account. You can do this in the ABC Bank app or at any branch.
+R4,v2,I can only provide information from our product and policy documents. I can't carry out transactions or make changes to your account. You can do this in the mobile app or at any branch.
 R5,v2,"Our documents don't cover a 9-month tenure, so I can't give you a rate. The tenures available are 3 months (2.10% p.a.), 6 months (2.35% p.a.), 12 months (2.60% p.a.), 24 months (2.70% p.a.) and 36 months (2.75% p.a.).
 Source: Fixed Deposit - Product Sheet, Version 3.0, effective 1 April 2026"
 W1,v2,"I can't assess eligibility or share lending criteria. Credit decisions are made by our staff after a full application. Loan interviews are available by appointment at Bugis Main, Novena Main and Jurong East Main.
