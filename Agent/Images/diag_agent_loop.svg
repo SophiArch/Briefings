@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" font-family="Lato, 'IBM Plex Sans', sans-serif">
+  <rect width="1000" height="400" fill="#282a36"/>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f8f8f2"/>
+    </marker>
+  </defs>
+  <!-- human brief -->
+  <rect x="20" y="150" width="170" height="90" rx="12" fill="#44475a" stroke="#bd93f9" stroke-width="2"/>
+  <text x="105" y="188" fill="#f8f8f2" font-size="20" text-anchor="middle">You: brief</text>
+  <text x="105" y="214" fill="#8be9fd" font-size="15" text-anchor="middle">goal · rules · evidence</text>
+  <!-- loop container -->
+  <rect x="250" y="40" width="470" height="320" rx="20" fill="none" stroke="#6272a4" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="485" y="380" fill="#6272a4" font-size="16" text-anchor="middle">agent loop: runs many times without you</text>
+  <g font-size="20" text-anchor="middle">
+    <rect x="410" y="60" width="150" height="70" rx="12" fill="#44475a" stroke="#f1fa8c" stroke-width="2"/>
+    <text x="485" y="102" fill="#f8f8f2">Plan</text>
+    <rect x="560" y="230" width="140" height="70" rx="12" fill="#44475a" stroke="#50fa7b" stroke-width="2"/>
+    <text x="630" y="263" fill="#f8f8f2">Act</text>
+    <text x="630" y="286" fill="#8be9fd" font-size="14">write + run code</text>
+    <rect x="270" y="230" width="140" height="70" rx="12" fill="#44475a" stroke="#8be9fd" stroke-width="2"/>
+    <text x="340" y="263" fill="#f8f8f2">Observe</text>
+    <text x="340" y="286" fill="#8be9fd" font-size="14">outputs, errors</text>
+  </g>
+  <g stroke="#f8f8f2" stroke-width="2" fill="none">
+    <path d="M190,185 C300,180 330,85 408,85" marker-end="url(#a)"/>
+    <path d="M560,110 C640,120 650,170 640,228" marker-end="url(#a)"/>
+    <path d="M560,265 L412,265" marker-end="url(#a)"/>
+    <path d="M330,230 C320,170 350,120 408,115" marker-end="url(#a)"/>
+    <path d="M700,265 L790,220" marker-end="url(#a)"/>
+  </g>
+  <!-- deliverable + review -->
+  <rect x="790" y="150" width="190" height="90" rx="12" fill="#44475a" stroke="#ff5555" stroke-width="2"/>
+  <text x="885" y="188" fill="#f8f8f2" font-size="20" text-anchor="middle">You: review</text>
+  <text x="885" y="214" fill="#8be9fd" font-size="15" text-anchor="middle">evidence vs claims</text>
+  <text x="885" y="140" fill="#ffb86c" font-size="15" text-anchor="middle">confident summary</text>
+  <text x="485" y="160" fill="#ffb86c" font-size="15" text-anchor="middle">"it ran" ≠ "it's right"</text>
+</svg>
