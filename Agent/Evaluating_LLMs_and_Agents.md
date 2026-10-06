@@ -73,12 +73,12 @@ style: |
 
 ---
 
-# Tonight's Plan (3 hours)
+# Session Plan (3 hours)
 
 | Time | Block |
 |------|-------|
 | 0:00 – 0:45 | **Part 1 concepts:** why evals, what to measure, four kinds of grader |
-| 0:45 – 1:20 | **Lab:** build an eval harness for a bank's document-grounded assistant |
+| 0:45 – 1:20 | **Hands-on:** build an eval harness for a bank's document-grounded assistant |
 | 1:20 – 1:28 | Debrief and takeaways |
 | 1:28 – 1:38 | Break |
 | 1:38 – 2:55 | **Part 2:** AI agent as data scientist (live demo, review, rewrite the brief) |
@@ -92,8 +92,8 @@ style: |
 - Both parts use realistic scenarios
   - Part 1: a bank's document-grounded customer assistant and its test set
   - Part 2: a public credit-card fraud dataset
-- Lab notebooks run offline on fixed data, so a flaky Wi-Fi or expired Azure lab won't stop anyone
-- Optional: students with an Anthropic or Foundry key can switch on a live judge
+- Notebooks run offline on fixed data, so flaky Wi-Fi or an expired cloud subscription won't stop anyone
+- Optional: participants with an Anthropic or Foundry key can switch on a live judge
 -->
 
 ---
@@ -113,7 +113,7 @@ style: |
 
 - Analogy: unit tests for software; nobody re-clicks every button after each commit
 - GenAI breaks silently: no stack trace, just a confident wrong answer
-- In tonight's scenario, an old fee schedule left in the index quotes superseded fees: exactly the regression evals catch
+- In this session's scenario, an old fee schedule left in the index quotes superseded fees: exactly the regression evals catch
 ❓ Ask: "How did you decide the last chatbot or assistant you built was good enough to ship?"
 -->
 
@@ -226,7 +226,7 @@ style: |
 - Split the eval set:
   - **Dev:** look at it, debug, iterate freely
   - **Test:** score at release time only; report this number
-- Lab split: 8 dev cases, 18 test cases
+- Exercise split: 8 dev cases, 18 test cases
 
 > Same lesson as the k-fold leakage deck: if the score looks too good, check what you peeked at
 
@@ -258,7 +258,7 @@ style: |
 # Graders 1–2: Exact Match and Rule Checks
 
 - Copilot Studio's test set template offers **exact match, text match, meaning match** (test set import template)
-- **Exact match:** 0 of 52 lab responses pass, even the correct ones
+- **Exact match:** 0 of 52 sample responses pass, even the correct ones
 - **Rules** you write in code:
   - `must_include` → `"$2.00" in response`
   - `must_not_include` → `"$5.00" not in response`
@@ -284,7 +284,7 @@ vec.build_analyzer()("$5.00 per month")   # ['00', 'per', 'month', '00 per', 'pe
 similarity("$2.00 per month", "$5.00 per month")   # 1.0
 ```
 
-- In the lab, superseded answers ($5.00, $7.00) **pass** similarity
+- In the exercise, superseded answers ($5.00, $7.00) **pass** similarity
 - A06 v1 ($7.00, wrong) scores **higher** than A06 v2 ($5.00, correct)
 - Embedding models do better, but share the weakness: they measure topic
 - Agreement with human labels: **κ = 0.49**
@@ -339,7 +339,7 @@ verdict = msg.parsed_output
 - Rubric quality matters more than which model judges
   - vague rubric = inconsistent verdicts
 - Give the judge the reference answer: judging "is this right?" without one invites the judge's own knowledge
-- Lab supports Claude via the Anthropic API or Microsoft Foundry; default mode uses cached verdicts
+- The notebook supports Claude via the Anthropic API or Microsoft Foundry; default mode uses cached verdicts
 -->
 
 ---
@@ -359,7 +359,7 @@ verdict = msg.parsed_output
 ⏱️ Slide Timing: 3 min
 
 - Zheng et al. measured position and verbosity bias on MT-Bench; strong judges still reached ~80% agreement with humans
-- Lab shows the last two biases in action: A11 v1 omission passed; R5 v2 good refusal failed
+- The exercise shows the last two biases in action: A11 v1 omission passed; R5 v2 good refusal failed
 - Rule of thumb: never deploy a judge you have not compared with human labels
 -->
 
@@ -398,7 +398,7 @@ verdict = msg.parsed_output
 ⏱️ Slide Timing: 3 min
 
 - False passes are the dangerous cell: a wrong answer the grader waves through
-- 92% agreement sounds great until you read the 4 disagreements, which the lab makes students do
+- 92% agreement sounds great until you read the 4 disagreements, which the exercise asks participants to do
 - Rules at 100% is partly circular: the same person wrote the rules and the labels; on new, unforeseen failures they would score lower
 -->
 
@@ -445,7 +445,7 @@ verdict = msg.parsed_output
 | Low-code agents | Copilot Studio agent evaluation: test sets with exact, text and meaning match |
 | Azure-native | Azure AI Foundry evaluation (`azure-ai-evaluation` SDK): groundedness, relevance, agent evaluators |
 | Open source | promptfoo, Ragas (RAG metrics), DeepEval |
-| DIY | pandas + rules + a judge call, which is what the lab builds |
+| DIY | pandas + rules + a judge call, which is what the exercise builds |
 
 > Tools change every quarter; test sets, rubrics and human calibration carry over
 
@@ -459,9 +459,9 @@ verdict = msg.parsed_output
 
 ---
 
-# Lab: Build an Eval Harness (35 min)
+# Hands-On: Build an Eval Harness (35 min)
 
-- Open `eval_lab/llm_eval_harness.ipynb` (Colab badge at the top)
+- Open `eval_harness/llm_eval_harness.ipynb` (Colab badge at the top)
 - Data: 26 cases × 2 builds of the bank assistant = 52 responses
   - **v1:** superseded docs indexed, no refusal rules
   - **v2:** after the document audit and instructions
@@ -481,7 +481,7 @@ verdict = msg.parsed_output
 
 ---
 
-# Lab Debrief
+# Hands-On Debrief
 
 <div class="columns">
 <div>
@@ -576,11 +576,11 @@ verdict = msg.parsed_output
 # Break — 10 Minutes
 
 - Up next: **AI agent as data scientist**
-- Open `agent_review_lab/agent_v1_output.ipynb`, but don't scroll to the end yet
+- Open `agent_review/agent_v1_output.ipynb`, but don't scroll to the end yet
 
 <!--
 ⏱️ Slide Timing: 10 min
 
-- Instructor: during the break, open your coding agent and the dataset URL ready for the live demo
+- Presenter: during the break, open your coding agent and the dataset URL ready for the live demo
 - Check the fallback notebook renders, in case the live agent is slow or the network drops
 -->

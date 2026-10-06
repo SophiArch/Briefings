@@ -86,7 +86,7 @@ style: |
 <!--
 ⏱️ Slide Timing: 3 min
 
-- Students have probably used a chat assistant for snippets; agents differ because they execute and iterate
+- Participants have probably used a chat assistant for snippets; agents differ because they execute and iterate
 - Platforms such as Fabric and Azure ML are adding these agents into the notebooks data teams already use
 - METR measures task length at 50% success; long tasks are exactly where silent mistakes pile up
 -->
@@ -118,7 +118,7 @@ style: |
 <!--
 ⏱️ Slide Timing: 2 min
 
-- Be honest with students: these gains are real and employers expect them to use agents
+- Be honest with participants: these gains are real and employers expect them to use agents
 - Best use: compress the mechanical work so more time goes into judgement
 - Worst use: outsourcing the judgement itself, which is what the next slide is about
 -->
@@ -191,13 +191,13 @@ Build a fraud detection model on fraud_dataset.csv and tell me how accurate it i
 - Dataset: the fraud sample from the scenario (link in the brief)
 - Agent: whichever you have (Claude Code, Copilot agent mode, Colab, Fabric)
 - Watch for: what it checks, what it drops, how it splits, what it claims
-- Fallback: `agent_review_lab/agent_v1_output.ipynb` has a typical run, already executed
+- Fallback: `agent_review/agent_v1_output.ipynb` has a typical run, already executed
 
 <!--
 ⏱️ Slide Timing: 2 min
 
-- Brief and URL are in agent_review_lab/briefs/brief_v1.md: copy and paste, don't improvise
-- Ask students to write down every decision the agent makes, as it makes it
+- Brief and URL are in agent_review/briefs/brief_v1.md: copy and paste, don't improvise
+- Ask participants to write down every decision the agent makes, as it makes it
 - If network or licences fail, open the fallback notebook; the review exercise works the same either way
 -->
 
@@ -243,7 +243,7 @@ Build a fraud detection model on fraud_dataset.csv and tell me how accurate it i
 
 # Hands-On: Review It Like a Pull Request (20 min)
 
-- In groups of 3, open `agent_review_lab/agent_v1_output.ipynb` and `review_checklist.md`
+- In groups of 3, open `agent_review/agent_v1_output.ipynb` and `review_checklist.md`
 - For each checklist section mark **OK / Problem / Not checked**, with evidence
 - Write code to test your suspicions: you may add cells
 - End with a verdict: **Approve / Request changes / Reject**
@@ -358,7 +358,7 @@ Build a fraud detection model on fraud_dataset.csv and tell me how accurate it i
 <!--
 ⏱️ Slide Timing: 4 min
 
-- Full text in agent_review_lab/briefs/brief_v2.md, with a table of what changed from v1
+- Full text in agent_review/briefs/brief_v2.md, with a table of what changed from v1
 - Not naming the traps is the point: a good brief works on data you haven't inspected yet
 - Same structure works for briefing a human contractor; agents just make the cost of a vague brief visible faster
 -->
@@ -450,7 +450,7 @@ Build a fraud detection model on fraud_dataset.csv and tell me how accurate it i
 
 - Tie both parts together: Part 1 evaluated an agent's answers, Part 2 evaluated an agent's analysis
 - Common thread: write expectations first, test against ground truth, read the failures
-- Homework idea: give brief v2 to a different agent and compare the reviews
+- Follow-up idea: give brief v2 to a different agent and compare the reviews
 -->
 
 ---
@@ -502,5 +502,5 @@ Build a fraud detection model on fraud_dataset.csv and tell me how accurate it i
 
 - Invite questions on either part; common one: "should I trust the agent less than a junior colleague?"
   - answer: trust both the same way, through evidence and review
-- Remind students the notebooks run in Colab with no keys required
+- Remind participants the notebooks run in Colab with no keys required
 -->

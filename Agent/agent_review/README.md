@@ -1,7 +1,7 @@
-# AI Agent as Data Scientist (extra session, part 2 of 2)
+# AI Agent as Data Scientist (part 2 of 2)
 
 A coding agent builds a fraud model from a one-line brief and reports "98.9% accuracy, ready for production".
-Students review its work like a pull request, find the leakage, and rewrite the brief.
+Participants review its work like a pull request, find the leakage, and rewrite the brief.
 
 ## Contents
 
@@ -10,14 +10,14 @@ Students review its work like a pull request, find the leakage, and rewrite the 
 | `../AI_Agent_as_Data_Scientist.md` | Marp deck with speaker notes and timings (~82 min) |
 | `briefs/brief_v1.md` | The one-line brief for the live demo, and why it is weak |
 | `briefs/brief_v2.md` | A brief written like a spec (goal, evidence rules, deliverables, escalation) |
-| `review_checklist.md` | Student checklist: reproduce, data, split, metrics, claims, verdict |
+| `review_checklist.md` | Reviewer checklist: reproduce, data, split, metrics, claims, verdict |
 | `agent_v1_output.ipynb` | Fallback "agent output" to review. A reconstruction of typical agent work, written for teaching; numbers are real |
-| `reference_review.ipynb` | Instructor answer key: duplicates, baseline, card-level leakage, business metric |
+| `reference_review.ipynb` | Reference answer key: duplicates, baseline, card-level leakage, business metric |
 | `../Images/` | Diagrams used in the deck |
 
 Both notebooks load a public credit-card fraud sample (`fraud_dataset.csv`) from GitHub, so they run in Colab with no setup.
 
-## Instructor prep
+## Presenter prep
 
 1. Have a coding agent ready (Claude Code, GitHub Copilot agent mode, Colab Data Science Agent, or Copilot in Fabric)
 2. Keep `briefs/brief_v1.md` open to paste. Don't improvise the wording
