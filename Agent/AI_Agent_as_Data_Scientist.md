@@ -65,8 +65,11 @@ style: |
 <!--
 ⏱️ Slide Timing: 1 min
 
-- Part 1: we evaluated an agent that answers customers
-- Part 2: the agent does OUR job (load data, build a model, report a number) and we evaluate its work
+- In this session, 
+  - we talk about what is happening right now
+    - the agent does OUR job 
+      - load data, build a model, report a number 
+    - and we evaluate its work
 - Same skill, different seat: you are the reviewer, not the builder
 -->
 
@@ -121,6 +124,9 @@ style: |
 - Be honest with participants: these gains are real and employers expect them to use agents
 - Best use: compress the mechanical work so more time goes into judgement
 - Worst use: outsourcing the judgement itself, which is what the next slide is about
+
+> EDA: Exploratory Data Analysis
+
 -->
 
 ---
@@ -129,7 +135,7 @@ style: |
 
 | Failure | What it looks like |
 |---|---|
-| **Drop before check** | Removes an ID column, losing the only way to spot duplicates |
+| **Drop before check** | Removes the ID column first, so duplicate checks can only compare whole rows |
 | **Leaky split** | Same customer or card on both sides of train/test |
 | **Wrong metric** | Reports accuracy on imbalanced data, no baseline |
 | **Silent assumptions** | Fills, filters or drops rows without saying so |
@@ -189,9 +195,8 @@ Build a fraud detection model on fraud_dataset.csv and tell me how accurate it i
 ```
 
 - Dataset: the fraud sample from the scenario (link in the brief)
-- Agent: whichever you have (Claude Code, Copilot agent mode, Colab, Fabric)
+- Agent: whichever you have (Colab, Claude Code, Copilot agent mode, Fabric)
 - Watch for: what it checks, what it drops, how it splits, what it claims
-- Fallback: `agent_review/agent_v1_output.ipynb` has a typical run, already executed
 
 <!--
 ⏱️ Slide Timing: 2 min
@@ -199,18 +204,23 @@ Build a fraud detection model on fraud_dataset.csv and tell me how accurate it i
 - Brief and URL are in agent_review/briefs/brief_v1.md: copy and paste, don't improvise
 - Ask participants to write down every decision the agent makes, as it makes it
 - If network or licences fail, open the fallback notebook; the review exercise works the same either way
+
 -->
 
 ---
 
 # Live Demo (10 min)
 
-- Run brief v1 in the agent, screen shared
-- Narrate each step out loud:
-  - "It just dropped `trans_num`. Did it look at it first?"
-  - "Stratified split: good for balance, but does it stop duplicates?"
-  - "Which metric is it reporting? Against what baseline?"
-- Save the final summary: we review it next
+- Run one-line brief in the Colab    
+  - screen shared
+- Compare with another 
+  - agent_v1_output.ipynb (Claude Code)
+- Dependent on agent, possible outcomes
+  - may drop `trans_num`
+  - may catch duplicates 
+  - may use stratified splits 
+  - may use accuracy metrics to report 
+  - ...
 
 <!--
 ⏱️ Slide Timing: 10 min
@@ -241,9 +251,9 @@ Build a fraud detection model on fraud_dataset.csv and tell me how accurate it i
 
 ---
 
-# Hands-On: Review It Like a Pull Request (20 min)
+# Hands-On: Review It Like a Pull Request (10 min)
 
-- In groups of 3, open `agent_review/agent_v1_output.ipynb` and `review_checklist.md`
+- open `agent_review/agent_v1_output.ipynb` and `review_checklist.md`
 - For each checklist section mark **OK / Problem / Not checked**, with evidence
 - Write code to test your suspicions: you may add cells
 - End with a verdict: **Approve / Request changes / Reject**
@@ -285,7 +295,18 @@ Build a fraud detection model on fraud_dataset.csv and tell me how accurate it i
 - Fraud comes in **bursts**: median of 10 fraud transactions per compromised card
 - Random split: **99%** of compromised cards in test also appear as fraud in training
 - Model learns *that card*, not *fraud*
-- Production scores **new** stolen cards, so split by `cc_num` (`GroupShuffleSplit`)
+- In production every stolen card is **new**, 
+  - so the test set must hold cards the model hasn't seen: 
+    - split by `cc_num` (`GroupShuffleSplit`)
+
+
+```python
+from sklearn.model_selection import GroupShuffleSplit
+
+gss = GroupShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
+
+train_idx, test_idx = next(gss.split(X, y, groups=df["cc_num"]))
+```
 
 <!--
 ⏱️ Slide Timing: 3 min

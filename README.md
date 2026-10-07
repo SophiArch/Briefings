@@ -2,6 +2,9 @@
 
 Short, focused write-ups on AI/ML, Data Analytics, Data Science, and technology topics worth a quick read. Each briefing distills a single concept, incident, or technique into something you can digest in a few minutes.
 
+## Agent
+- [AI_Agent_as_Data_Scientist.html](https://sophiarch.github.io/Briefings/Agent/AI_Agent_as_Data_Scientist.html)
+
 ## CausalInference
 - [Cause_or_Coincidence.html](https://sophiarch.github.io/Briefings/CausalInference/Cause_or_Coincidence.html)
 - [Intro_Causal_Inference.html](https://sophiarch.github.io/Briefings/CausalInference/Intro_Causal_Inference.html)
@@ -26,7 +29,7 @@ Short, focused write-ups on AI/ML, Data Analytics, Data Science, and technology 
 
 ---
 
-<img src="https://lms.sophiarch.com/logo.png" alt="SophiArch" width="120" />
+<img src="https://lms.sophiarch.com/brand/logo.png" alt="SophiArch" width="120" />
 
 ## About SophiArch
 

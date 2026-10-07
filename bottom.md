@@ -1,6 +1,6 @@
 ---
 
-<img src="https://lms.sophiarch.com/logo.png" alt="SophiArch" width="120" />
+<img src="https://lms.sophiarch.com/brand/logo.png" alt="SophiArch" width="120" />
 
 ## About SophiArch
 
