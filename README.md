@@ -28,6 +28,7 @@ Short, focused write-ups on AI/ML, Data Analytics, Data Science, and technology 
 
 ## Visualizations
 - [Dashboard_Design_Best_Practices.html](https://sophiarch.github.io/Briefings/Visualizations/Dashboard_Design_Best_Practices.html)
+- [How_to_Spot_a_Misleading_Graph.html](https://sophiarch.github.io/Briefings/Visualizations/How_to_Spot_a_Misleading_Graph.html)
 
 
 ---
