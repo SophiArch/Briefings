@@ -10,6 +10,7 @@ class:
 header: "Simpson's Paradox"
 footer: "© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)"
 style: |
+    @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css';
     .columns {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -21,7 +22,7 @@ style: |
     table {
         width: 100%;
     }
-    theader {
+    thead {
         font-size: 0.7em;
         text-align: center;
     }
@@ -52,10 +53,9 @@ style: |
     .fa-twitter { color: aqua; }
     .fa-mastodon { color: purple; }
     .fa-linkedin { color: blue; }
-    .fa-triangle-exclamation
+    .fa-triangle-exclamation,
     .fa-window-maximize { color: skyblue; }
     .fa-arrow-alt-circle-right {color: #8be9fd }
-    @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
 ---
 
 # <br><br><br><br>Simpson's Paradox
@@ -93,14 +93,18 @@ style: |
 
 # Watch: Simpson's Paradox Explained
 
-- The surgeon example and worked math in this deck are drawn from this video
 - [Simpson's Paradox: Why More Data Can Trick You](https://www.youtube.com/watch?v=vdaNwjlAq9M)
+    - Source of the surgeon example and worked math in this deck
+- [How Statistics Can Be Misleading](https://www.ted.com/talks/mark_liddell_how_statistics_can_be_misleading) — TED-Ed, Mark Liddell (2016)
+    - 4 min; adds a smoking study and Florida death penalty cases
+    - Ends on the point most explainers skip: the overall number is sometimes the right one
 
 <!--
 ⏱️ Slide Timing: 1 min
 
 - Good slide to leave on screen for anyone who wants to rewatch the walkthrough after the session
-- Worth sharing before any team presents an aggregate metric to leadership
+- The TED-Ed video is the shorter pre-read; its hospital example mirrors the surgeon story here
+- Its closing point sets up the "Split or Combine?" slide near the end of this deck
 -->
 
 ---
@@ -247,7 +251,7 @@ style: |
 - Reason: 
     - they take the sickest, most complex patients that smaller hospitals decline to treat
 - Once outcomes are **risk-adjusted** for patient severity, 
-    - top referral centers frequently rank at the top
+    - top referral centers often move up substantially
 - Raw league tables can punish the hospitals doing the hardest, most valuable work
 > Source: Krumholz et al. (2006), risk-standardized mortality methodology — see References
 
@@ -261,22 +265,26 @@ style: |
 
 ---
 
-# Real-World Case: Clinical Trials
-- A new treatment can look **weaker overall** than a control or existing treatment
-- But the same treatment can **outperform** 
-    - once you stratify by disease severity or baseline risk
-- Cause: 
-    - sicker patients may be disproportionately assigned to (or seek out) the new treatment
-- Trial design and analysis must account for this
-    - via **stratification** or **randomization checks**
-> Classic case: Charig et al. (1986) kidney stone treatment trial — see References
+# Real-World Case: Kidney Stone Treatments (1986)
+
+| Success rate | Small stones | Large stones | Overall |
+|---|---|---|---|
+| Open surgery (older) | **93%** (81/87) | **73%** (192/263) | 78% (273/350) |
+| PCNL (newer, less invasive) | 87% (234/270) | 69% (55/80) | **83%** (289/350) |
+
+- The newer treatment looks **better overall** — but is **worse for both** stone sizes
+- Cause: doctors gave the newer treatment mostly **small, easier** stones
+- This was an **observational** comparison, not a randomized trial
+> Source: Charig et al. (1986), British Medical Journal — see References
 
 <!--
 ⏱️ Slide Timing: 3 min
 
-- Clinical trials guard against this with randomization, but observational and post-hoc analyses are especially vulnerable
-- A treatment that "failed" in aggregate results might still be the right choice for a specific risk group
-- Regulatory reviewers specifically look for subgroup reversals like this during drug approval review
+- Same structure as the surgeon example, with real data: the lurking variable is stone size
+- Large stones are harder to treat AND were steered toward open surgery — so open surgery's overall rate is dragged down by its harder caseload
+- Randomization is the standard defense: if a coin decides who gets which treatment, stone size can't line up with treatment choice
+- Observational data — patient records, product analytics, most dashboards — has no such protection
+❓ Ask: "Where in your own data does someone choose which group a case lands in?"
 -->
 
 ---
@@ -303,8 +311,45 @@ style: |
 
 ---
 
-# Lesson 1: Aggregates Can Deceive
-- A single overall number can **completely reverse** the story told by its subgroups
+# Real-World Cases: Age as the Lurking Variable
+<div class="columns">
+<div>
+
+**Smoking and survival (UK)**
+- 20-year follow-up of 1,314 women in Whickham
+- Overall: **24%** of smokers died vs **31%** of non-smokers
+- The non-smokers were **older** on average
+- Within most age groups, smokers died at the **higher** rate
+
+</div>
+<div>
+
+**COVID-19 case fatality (2020)**
+- Italy's overall case fatality rate was **higher** than China's
+- Yet Italy's rate was **lower in every age group**
+- Italy's confirmed cases were much **older**
+- Same mechanism: a different mix, not a different risk
+
+</div>
+</div>
+
+> Sources: Appleton, French & Vanderpump (1996); von Kügelgen, Gresele & Schölkopf (2021) — see References
+
+<!--
+⏱️ Slide Timing: 3 min
+
+- Age is the most common lurking variable in practice: it drives outcomes and it differs between almost any two populations you might compare
+- Smoking: the smokers in the sample were younger, so fewer of them died in 20 years — the aggregate made smoking look protective
+- COVID: early cross-country comparisons of fatality rates were largely comparisons of age structure and testing
+- The smoking case also appears in the TED-Ed video on the Watch slide
+-->
+
+---
+
+# Aggregates Can Deceive
+- An overall rate is a **weighted average** of subgroup rates, weighted by group size
+- A group with a **large, easy** subset can post a high overall number without being the best performer
+- A group with a **large, hard** subset can post a low overall number despite being the best performer
 - This isn't rare — it shows up in medicine, admissions, sports, sales, and A/B tests
 - **Golden Rule:** an aggregate statistic is a starting question, not a final answer
 
@@ -312,95 +357,68 @@ style: |
 ⏱️ Slide Timing: 2 min
 
 - Transition slide — moving from "here's the paradox" to "here's what to do about it"
-- Four lessons follow, each a direct, actionable takeaway for working with grouped data
+- Reconnect explicitly to the surgeon math slide: the weights differed, so the comparison was not apples-to-apples
+- A/B tests: if traffic splits shift between segments mid-test (e.g. mobile vs desktop), the blended conversion rate can reverse the per-segment result
 -->
 
 ---
 
-# Lesson 2: Always Look for Subgroups
+# Look for Subgroups — Carefully
 - Before trusting an aggregate comparison, ask:
    - What natural subgroups exist in this data?
-   - Are those subgroups distributed **unevenly** across the things being compared?
+   - Are they distributed **unevenly** across the things being compared?
    - Does splitting by subgroup change — or reverse — the conclusion?
-- **Best Practice:** stratify first, aggregate second
+- But splitting has its own risks:
+   - Slice the data enough ways and **some split will reverse almost any result**
+   - Small subgroups give **noisy** rates
+- Choose splits for a reason **before** looking at the results
 
 <!--
 ⏱️ Slide Timing: 3 min
 
-- This is the practical checklist version of the lurking-variable concept
 - Encourage a habit: whenever a metric compares two groups (doctors, campaigns, cohorts), ask what's unevenly distributed underneath it
-- Segment size matters too — check that subgroup sample sizes are large enough to trust
+- The counterweight: hunting through dozens of segments until one flips is its own way to mislead
+- A split justified by how the data was produced (patient risk, stone size, age) is far more credible than one found by searching
 -->
 
 ---
 
-# Lesson 3: Weighted Averages, Not Simple Averages
-- An overall rate is a **weighted average** of subgroup rates, weighted by group size
-- A group with a **large, easy** subset can post a high overall number without being the best performer
-- A group with a **large, hard** subset can post a low overall number despite being the best performer
-- Always ask: 
-    - what are the weights, 
-    - and are they the same across what I'm comparing?
+# Split or Combine? Ask What Causes What
+- **Split** when the third variable affects **both** the group and the outcome
+    - Patient risk → which surgeon *and* survival
+    - Stone size → which treatment *and* success
+- **Combine** when the third variable is **caused by** the thing being compared
+    - A drug lowers blood pressure, and lower blood pressure aids recovery
+    - Splitting by blood pressure hides part of the drug's real effect
+- The same numbers can call for either answer
+    - the data alone can't tell you which — **how the data was produced** does
+> Source: Pearl (2014), Understanding Simpson's Paradox — see References
 
 <!--
-⏱️ Slide Timing: 3 min
+⏱️ Slide Timing: 4 min
 
-- This is the arithmetic intuition to carry forward — reconnect explicitly to the surgeon math slide
-- Same logic explains skewed batting averages, uneven A/B test traffic splits, and biased survey aggregates
-- Rule of thumb: if the group weights differ, the aggregate comparison is not apples-to-apples
+- This slide stops the audience over-learning "always stratify" — the subgroup view is not automatically the true one
+- Confounder (split): a common cause of both the grouping and the outcome
+- Mediator (combine): a step on the path from the thing being compared to the outcome — conditioning on it removes part of the effect you want to measure
+- This is the same conclusion the TED-Ed video ends on: sometimes the overall number gives the more accurate picture
+❓ Ask: "In the surgeon example, could the surgeon have caused the patient's risk level? Why does that matter?"
 -->
 
 ---
 
-# Lesson 4: When Aggregation Is (and Isn't) Valid
-- **Aggregation is valid when:**
-   - Subgroup composition is similar across the groups being compared
-   - Or subgroup effects point in the same direction and are of similar size
-- **Aggregation is misleading when:**
-   - Groups differ heavily in subgroup composition (like caseload mix here)
-   - A lurking variable correlates with both the outcome and the grouping
-- **When in doubt:** report both the aggregate and the stratified breakdown
-
-<!--
-⏱️ Slide Timing: 3 min
-
-- Not every aggregate is broken — this slide prevents the audience from over-correcting into "never trust an average"
-- The test is simple: do the subgroup weights match? If yes, aggregation is safe
-- Reporting both views costs little and builds trust with stakeholders who might otherwise be misled
--->
-
----
-
-# Best Practices Checklist
-1. Identify plausible confounding or lurking variables
-2. Stratify the data before trusting an aggregate comparison
-3. Compute both aggregate and subgroup rates
-4. Check subgroup weights — are they even across groups?
-5. Investigate any reversal between subgroup and aggregate trends
-6. Report risk-adjusted or stratified metrics alongside raw ones
-7. Stay skeptical of any single summary number
+# Before You Present a Comparison
+1. List plausible lurking variables — and **how** each relates to the groups and the outcome
+2. Compute both aggregate and subgroup rates; check whether the subgroup **weights** differ
+3. Investigate any reversal — don't dismiss it as a data error
+4. Decide split vs combine from **what causes what**, not from which answer you prefer
+5. Report risk-adjusted or stratified metrics alongside raw ones
+6. Never rank people, teams, or hospitals on raw aggregate rates alone
 
 <!--
 ⏱️ Slide Timing: 2 min
 
-- Workflow version of everything covered in the lessons — a checklist to run before presenting any comparative metric
-- Step 7 is deliberately last: skepticism should persist even after subgroup checks pass
--->
-
----
-
-# Common Mistakes to Avoid
-- Ranking people, teams, or hospitals on raw aggregate rates alone
-- Assuming a group difference implies causation without checking confounders
-- Ignoring uneven sample sizes or uneven subgroup composition
-- Treating a subgroup reversal as a data error instead of investigating it
-- Reporting one blended metric when stakeholders need the stratified view
-
-<!--
-⏱️ Slide Timing: 2 min
-
-- This list doubles as a review checklist for anyone signing off on a comparative report or dashboard
-- Every item here is a mistake the surgeon example, by construction, would sail right through undetected
+- Workflow version of everything covered — a checklist to run before presenting or signing off on any comparative metric
+- Every item here is a check the surgeon example, by construction, would fail
 -->
 
 ---
@@ -431,7 +449,9 @@ style: |
 | **Bickel, Hammel & O'Connell (1975)** | Bickel, P. J., Hammel, E. A., & O'Connell, J. W. (1975). [Sex Bias in Graduate Admissions: Data from Berkeley](https://www.science.org/doi/10.1126/science.187.4175.398). *Science*, 187(4175), 398–404. |
 | **Charig et al. (1986)** | Charig, C. R., Webb, D. R., Payne, S. R., & Wickham, J. E. A. (1986). [Comparison of Treatment of Renal Calculi by Open Surgery, Percutaneous Nephrolithotomy, and Extracorporeal Shockwave Lithotripsy](https://www.bmj.com/content/292/6524/879). *British Medical Journal*, 292(6524), 879–882. |
 | **Krumholz et al. (2006)** | Krumholz, H. M., Wang, Y., Mattera, J. A., et al. (2006). [An Administrative Claims Model Suitable for Profiling Hospital Performance Based on 30-Day Mortality Rates Among Patients With Heart Failure](https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.105.611194). *Circulation*, 113(13), 1693–1701. |
+| **Appleton, French & Vanderpump (1996)** | Appleton, D. R., French, J. M., & Vanderpump, M. P. J. (1996). [Ignoring a Covariate: An Example of Simpson's Paradox](https://www.tandfonline.com/doi/abs/10.1080/00031305.1996.10473549). *The American Statistician*, 50(4), 340–341. |
 | **Pearl (2014)** | Pearl, J. (2014). [Understanding Simpson's Paradox](https://ftp.cs.ucla.edu/pub/stat_ser/r414.pdf). *The American Statistician*, 68(1), 8–13. |
+| **von Kügelgen, Gresele & Schölkopf (2021)** | von Kügelgen, J., Gresele, L., & Schölkopf, B. (2021). [Simpson's Paradox in COVID-19 Case Fatality Rates: A Mediation Analysis of Age-Related Causal Effects](https://arxiv.org/abs/2005.07180). *IEEE Transactions on Artificial Intelligence*, 2(1), 18–27. |
 
 <!--
 ⏱️ Slide Timing: 1 min
@@ -440,5 +460,6 @@ style: |
 - Charig et al. (1986) is the classic kidney-stone treatment case, textbook example of Simpson's Paradox in a clinical trial
 - Krumholz et al. (2006) underlies the risk-standardized mortality methodology CMS uses for hospital rankings
 - Bickel, Hammel & O'Connell (1975) is the canonical UC Berkeley case study referenced earlier in the deck
-- Pearl (2014) gives a modern causal-inference framing of why and when the paradox occurs — worth bookmarking for deeper study
+- Pearl (2014) gives a modern causal-inference framing of why and when the paradox occurs — the basis of the "Split or Combine?" slide
+- Appleton et al. (1996) is the Whickham smoking study; von Kügelgen et al. (2021) analyses the Italy vs China COVID-19 reversal
 -->
