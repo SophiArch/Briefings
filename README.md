@@ -2,6 +2,9 @@
 
 Short, focused write-ups on AI/ML, Data Analytics, Data Science, and technology topics worth a quick read. Each briefing distills a single concept, incident, or technique into something you can digest in a few minutes.
 
+## AIAndHumanity
+- [Senior_Engineers_Need_Junior_Questions.html](https://sophiarch.github.io/Briefings/AIAndHumanity/Senior_Engineers_Need_Junior_Questions.html)
+
 ## Agent
 - [AI_Agent_as_Data_Scientist.html](https://sophiarch.github.io/Briefings/Agent/AI_Agent_as_Data_Scientist.html)
 
