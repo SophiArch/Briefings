@@ -87,18 +87,19 @@ A summary of <a href="https://www.cio.com/article/4239726/your-senior-engineers-
 # A Quiet Drop in Interruptions
 
 - Juniors now ask an **AI assistant first**, a senior only if that fails
-- **51%** of developers ask AI for help they once asked a colleague
-- **62%** of them do it to avoid looking uninformed
+- In one study, **about half** of 131 developers now ask AI what they once asked a teammate
+- **6 in 10** said AI is easier to ask: no fear of looking foolish
 - Fewer Slack pings, higher velocity: looks like a **win**
 - AI also absorbs the trial and error juniors used to learn from
 
-> Source: survey figures as cited in Virmani (2026) — see References
+> Source: UBC & University of Zurich (2026), IEEE TSE study, via Virmani (2026) — see References
 
 <!--
 ⏱️ Slide Timing: 2 min
 
-- The 62% figure matters most: the driver is social fear, not convenience
+- The fear figure matters most: the driver is social, not convenience
   - teams that punish "dumb questions" accelerate this
+- Small sample (30 observed, 131 surveyed), so read it as a signal, not a census
 - Nobody decided to stop asking seniors; it happened one private chat at a time
 ❓ Ask: "When did someone last ask you why your system works the way it does?"
 -->
@@ -207,17 +208,18 @@ A summary of <a href="https://www.cio.com/article/4239726/your-senior-engineers-
 # Three Risks Building Up
 
 - **Single point of failure:** design reasons stay in veterans' heads; shared ownership was really unshared memory
-- **Slower recovery on complex outages:** every 25% rise in AI adoption linked to a **7.2% drop** in delivery stability
-- **Rising verification load:** developers who delegated coding to AI lost the most debugging skill; seniors spend up to **19%** more time checking AI code
+- **Less stable delivery:** every 25% rise in AI adoption linked to a **7.2% drop** in delivery stability
+- **Debugging tax:** in a trial, developers learning a new library with AI scored lowest on **debugging**; seniors pick up the fixes later
 
-> Source: Google DORA (2024); Anthropic (2026) skill formation study, as cited in Virmani (2026) — see References
+> Source: Google DORA (2024); Shen & Tamkin (2026), Anthropic skill formation trial — see References
 
 <!--
 ⏱️ Slide Timing: 4 min
 
-- Routine bugs get faster with AI; cross-service outages get slower
-  - seniors on the call re-derive how subsystems interact
-- Stability includes mean time to recovery: how long until service is back
+- DORA shows a correlation, and says its data can't explain why
+  - lost senior context is the author's explanation, not DORA's finding
+- Stability covers failed changes and how long recovery takes
+- Anthropic trial: 52 engineers on an unfamiliar library, so it's about learners, not seniors
 - The junior still needs the senior, just later and more expensively
   - from upstream teaching to downstream code forensics
 -->
@@ -265,6 +267,28 @@ A summary of <a href="https://www.cio.com/article/4239726/your-senior-engineers-
 
 ---
 
+# Counterpoints and Caveats
+
+- **Fewer juniors to ask:** employment of developers aged 22–25 fell about **20%** from its late-2022 peak
+- **AI amplifies, it doesn't decide:** DORA 2025 links AI to higher throughput; stability depends on team foundations
+- **Usage style matters:** AI users who asked for explanations scored best; heavy delegators scored worst
+- **Old channel had costs:** constant interruptions, and one senior answering everything is a single point of failure
+- **Core claim untested:** no study yet measures senior fluency decaying
+
+> Added by SophiArch, not from the original article. Sources: Brynjolfsson et al. (2025); DORA (2025); Shen & Tamkin (2026) — see References
+
+<!--
+⏱️ Slide Timing: 3 min
+
+- The argument is plausible, but its statistics support nearby claims, not the central one
+- Mechanism rests on learning-by-teaching research (the "protégé effect"), mostly from students
+- If junior hiring keeps falling, the questions disappear whatever tools juniors use
+- Practical upshot: teach juniors to ask AI "explain why", not just "write this"
+❓ Ask: "Which of these counterpoints applies most to your team?"
+-->
+
+---
+
 # Key Takeaways
 
 - Junior questions were **free training for seniors**, not just help for juniors
@@ -285,19 +309,38 @@ A summary of <a href="https://www.cio.com/article/4239726/your-senior-engineers-
 
 ---
 
-# References
+# References — Source and Cited Studies
 
 | Topic | Source |
 |---|---|
 | **Source article** | Virmani, N. (2026, October 26). [*Your senior engineers need junior questions more than juniors need answers*](https://www.cio.com/article/4239726/your-senior-engineers-need-junior-questions-more-than-juniors-need-answers.html). CIO, First Person |
+| **Help-seeking** | University of British Columbia & University of Zurich. (2026). [*From Disruptions to Discussions*](https://ieeexplore.ieee.org/document/11363384/). IEEE Transactions on Software Engineering |
 | **Code quality** | GitClear. (2025). [*AI Copilot Code Quality: 2025 Research*](https://www.gitclear.com/ai_assistant_code_quality_2025_research). GitClear |
 | **Delivery stability** | Google DORA. (2024). [*Accelerate State of DevOps Report 2024*](https://dora.dev/research/2024/dora-report/). Google Cloud |
-| **Skill formation** | Anthropic. (2026). [*How AI assistance impacts the formation of coding skills*](https://www.anthropic.com/research/AI-assistance-coding-skills). Anthropic |
+| **Skill formation** | Shen, J. H., & Tamkin, A. (2026). [*How AI Impacts Skill Formation*](https://arxiv.org/abs/2601.20245). Anthropic. [Summary](https://www.anthropic.com/research/AI-assistance-coding-skills) |
 
 <!--
 ⏱️ Slide Timing: 1 min
 
-- Start with Nishant Virmani's article: this deck only summarises it, and it links to the original sources
+- Start with Nishant Virmani's article: this deck summarises it, and it links to the original sources
 - DORA report is the one to bring to leadership: it ties AI adoption to stability numbers
 - Anthropic study is worth reading if you mentor juniors who rely on AI
+-->
+
+---
+
+# References — Further Reading
+
+| Topic | Source |
+|---|---|
+| **AI and delivery, 2025** | Google DORA. (2025). [*State of AI-assisted Software Development 2025*](https://dora.dev/research/2025/dora-report/). Google Cloud |
+| **Early-career jobs** | Brynjolfsson, E., Chandar, B., & Chen, R. (2025). [*Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence*](https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/). Stanford Digital Economy Lab |
+| **Learning by teaching** | Chase, C. C., Chin, D. B., Oppezzo, M. A., & Schwartz, D. L. (2009). Teachable agents and the protégé effect. *Journal of Science Education and Technology*, 18(4), 334–352 |
+
+<!--
+⏱️ Slide Timing: 1 min
+
+- These back the Counterpoints slide; none are cited in the original article
+- DORA 2025 updates the 2024 finding the article relies on
+- Canaries paper is the strongest data on the shrinking junior pipeline
 -->
