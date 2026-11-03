@@ -14,6 +14,7 @@ Short, focused write-ups on AI/ML, Data Analytics, Data Science, and technology 
 
 ## Cybersecurity
 - [Alignment_Assessment.html](https://sophiarch.github.io/Briefings/Cybersecurity/Alignment_Assessment.html)
+- [GenAI_Security.html](https://sophiarch.github.io/Briefings/Cybersecurity/GenAI_Security.html)
 - [Hugging_Face_Incident.html](https://sophiarch.github.io/Briefings/Cybersecurity/Hugging_Face_Incident.html)
 
 ## Development
