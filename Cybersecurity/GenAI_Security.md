@@ -58,7 +58,7 @@ style: |
     @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
 ---
 
-# <br><br>Generative AI Security
+# <br><br><br><br><br>Generative AI Security
 
 ![bg right width:50%](https://raw.githubusercontent.com/JasonL888/.claude/refs/heads/main/skills/marp_gen/assets/logo.png)
 
@@ -69,6 +69,23 @@ style: |
 - OWASP has turned the community's field experience into a Top 10 list for LLM applications
 - Today: the 2026 edition, one risk at a time, with the defences teams actually deploy
 -->
+
+---
+
+# Watch: OWASP's Top 10 Ways to Attack LLMs
+
+- 10-minute IBM Technology walkthrough of each risk, accessible to non-security audiences
+- Uses the 2025 ranking; the risk categories are unchanged in 2026
+- [OWASP's Top 10 Ways to Attack LLMs: AI Vulnerabilities Exposed](https://www.youtube.com/watch?v=gUNXZMcd2jU)
+
+<!--
+⏱️ Slide Timing: 1 min
+
+- Good pre-reading to share with attendees before the session
+- Concrete examples in the video map one-to-one onto the slides that follow
+- Only the numbers differ: use the table on the previous slide to translate
+-->
+
 
 ---
 
@@ -123,21 +140,6 @@ style: |
 
 ---
 
-# Watch: OWASP's Top 10 Ways to Attack LLMs
-
-- 10-minute IBM Technology walkthrough of each risk, accessible to non-security audiences
-- Uses the 2025 ranking; the risk categories are unchanged in 2026
-- [OWASP's Top 10 Ways to Attack LLMs: AI Vulnerabilities Exposed](https://www.youtube.com/watch?v=gUNXZMcd2jU)
-
-<!--
-⏱️ Slide Timing: 1 min
-
-- Good pre-reading to share with attendees before the session
-- Concrete examples in the video map one-to-one onto the slides that follow
-- Only the numbers differ: use the table on the previous slide to translate
--->
-
----
 
 # 1 — Prompt Injection
 
