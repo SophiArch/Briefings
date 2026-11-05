@@ -8,7 +8,7 @@ transition: fade
 class:
 - lead
 header: "Introduction to Docker"
-footer: "© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)"
+footer: "© 2026 SophiArch [MLOps & Model Deployment course](https://lms.sophiarch.com/courses/mlops-model-deployment?utm_source=briefings&utm_medium=referral&utm_campaign=docker)"
 style: |
     .columns {
         display: grid;

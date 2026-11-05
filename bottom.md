@@ -4,4 +4,4 @@
 
 ## About SophiArch
 
-These briefings are produced by [SophiArch](https://lms.sophiarch.com), a learning platform for AI, ML, and data science. Visit [lms.sophiarch.com](https://lms.sophiarch.com) for full courses and hands-on labs.
+These briefings are produced by [SophiArch](https://lms.sophiarch.com?utm_source=briefings&utm_medium=referral&utm_campaign=readme), a learning platform for AI, ML, and data science. Visit [lms.sophiarch.com](https://lms.sophiarch.com?utm_source=briefings&utm_medium=referral&utm_campaign=readme) for full courses and hands-on labs, or browse [all briefings](https://lms.sophiarch.com/briefings?utm_source=briefings&utm_medium=referral&utm_campaign=readme).

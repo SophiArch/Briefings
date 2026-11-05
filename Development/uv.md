@@ -8,7 +8,7 @@ transition: fade
 class:
 - lead
 header: "uv"
-footer: "© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)"
+footer: "© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com/courses?utm_source=briefings&utm_medium=referral&utm_campaign=uv)"
 style: |
     .columns {
         display: grid;

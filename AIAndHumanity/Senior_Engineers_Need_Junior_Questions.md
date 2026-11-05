@@ -8,7 +8,7 @@ transition: fade
 class:
 - lead
 header: "Senior Engineers Need Junior Questions"
-footer: "© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)"
+footer: "© 2026 SophiArch [AI-Assisted Data Science course](https://lms.sophiarch.com/courses/ai-assisted-data-science?utm_source=briefings&utm_medium=referral&utm_campaign=senior-engineers-need-junior-questions)"
 style: |
     .columns {
         display: grid;

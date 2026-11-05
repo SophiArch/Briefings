@@ -8,7 +8,7 @@ transition: fade
 class:
 - lead
 header: "Simpson's Paradox"
-footer: "© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)"
+footer: "© 2026 SophiArch [Statistics for Data Science course](https://lms.sophiarch.com/courses/statistics-for-data-science?utm_source=briefings&utm_medium=referral&utm_campaign=simpsons-paradox)"
 style: |
     @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css';
     .columns {

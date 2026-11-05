@@ -8,7 +8,7 @@ transition: fade
 class:
 - lead
 header: "The Aliveness of Awareness"
-footer: "© 2026 SophiArch"
+footer: "© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com/courses?utm_source=briefings&utm_medium=referral&utm_campaign=aigoingconscious)"
 style: |
     .columns {
         display: grid;

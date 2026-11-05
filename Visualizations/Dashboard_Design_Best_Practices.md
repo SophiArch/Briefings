@@ -8,7 +8,7 @@ transition: fade
 class:
 - lead
 header: "Dashboard & Visualization Design"
-footer: "© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)"
+footer: "© 2026 SophiArch [Data Visualisation course](https://lms.sophiarch.com/courses/data-visualisation?utm_source=briefings&utm_medium=referral&utm_campaign=dashboard-design-best-practices)"
 style: |
     .columns {
         display: grid;

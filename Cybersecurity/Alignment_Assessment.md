@@ -8,7 +8,7 @@ transition: fade
 class:
 - lead
 header: "Escaping the Sandbox: Alignment or Accident?"
-footer: "© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)"
+footer: "© 2026 SophiArch [Production AI Agents course](https://lms.sophiarch.com/courses/production-ai-agents?utm_source=briefings&utm_medium=referral&utm_campaign=alignment-assessment)"
 style: |
     .columns {
         display: grid;

@@ -13,11 +13,12 @@ This repo sits in the `SophiArchSite.code-workspace`. Brand, voice and audience 
 
 ## Deck front matter
 
-Copy it from an existing deck (for example `Agent/AI_Agent_as_Data_Scientist.md`): `marp: true`, `theme: dracula`, `size: 16:9`, `paginate: true`, `author`, a `header` with the briefing title, and the footer `© <year> SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)`.
+Copy it from an existing deck (for example `Agent/AI_Agent_as_Data_Scientist.md`): `marp: true`, `theme: dracula`, `size: 16:9`, `paginate: true`, `author`, a `header` with the briefing title, and a footer that links to the closest course, with UTM tags so clicks can be traced: `© <year> SophiArch [<Course> course](https://lms.sophiarch.com/courses/<slug>?utm_source=briefings&utm_medium=referral&utm_campaign=<deck-name>)`. `<deck-name>` is the file name in lowercase with hyphens. Keep the visible text short, because the theme clips long footers. If no course teaches the topic, use `[lms.sophiarch.com](https://lms.sophiarch.com/courses?<same tags>)`.
 
 ## Workflow
 
 1. Write or edit the `.md` deck. The `marp_gen` skill handles slide drafts and `excalidraw-skill` handles diagrams.
-2. Export it to `.html` and `.pdf` beside the source.
+2. Export it to `.html` and `.pdf` beside the source with `marp_gen <file>.md` from the deck's folder. Without a terminal, `marp` waits on stdin, so run it directly with `--no-stdin`.
 3. Rebuild the index with `uv run src/index.py`. It picks up every `.html` under a topic folder.
 4. Commit the source, the exports and `README.md` together.
+5. Add the new deck to `frontend/lib/briefings.ts` in `../SophiArchSite`, which feeds the `/briefings` page on lms.sophiarch.com.

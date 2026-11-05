@@ -8,7 +8,7 @@ transition: fade
 class:
 - lead
 header: "The OpenAI / Hugging Face Incident"
-footer: "© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)"
+footer: "© 2026 SophiArch [Production AI Agents course](https://lms.sophiarch.com/courses/production-ai-agents?utm_source=briefings&utm_medium=referral&utm_campaign=hugging-face-incident)"
 style: |
     .columns {
         display: grid;

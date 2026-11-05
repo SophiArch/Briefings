@@ -8,7 +8,7 @@ transition: fade
 class:
 - lead
 header: "python-dotenv"
-footer: "© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)"
+footer: "© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com/courses?utm_source=briefings&utm_medium=referral&utm_campaign=python-dotenv)"
 style: |
     .columns {
         display: grid;

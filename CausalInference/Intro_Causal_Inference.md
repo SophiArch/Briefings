@@ -8,7 +8,7 @@ transition: fade
 class:
 - lead
 header: "Introduction to Causal Inference"
-footer: "© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)"
+footer: "© 2026 SophiArch [Statistics for Data Science course](https://lms.sophiarch.com/courses/statistics-for-data-science?utm_source=briefings&utm_medium=referral&utm_campaign=intro-causal-inference)"
 style: |
     .columns {
         display: grid;

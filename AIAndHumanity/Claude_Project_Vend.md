@@ -8,7 +8,7 @@ transition: fade
 class: 
 - lead
 header: Project Vend: Can Claude Run a Small Shop?
-footer: "© 2025 SophiArch"
+footer: "© 2025 SophiArch [Production AI Agents course](https://lms.sophiarch.com/courses/production-ai-agents?utm_source=briefings&utm_medium=referral&utm_campaign=claude-project-vend)"
 style: |
     .columns {
         display: grid;

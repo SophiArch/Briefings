@@ -8,7 +8,7 @@ transition: fade
 class:
 - lead
 header: "Python Virtual Environments"
-footer: "© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com)"
+footer: "© 2026 SophiArch [lms.sophiarch.com](https://lms.sophiarch.com/courses?utm_source=briefings&utm_medium=referral&utm_campaign=python-virtual-environments)"
 style: |
     .columns {
         display: grid;
