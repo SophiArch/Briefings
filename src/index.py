@@ -22,18 +22,23 @@ def find_html_files() -> list[Path]:
 
 
 def build_readme(html_files: list[Path]) -> str:
-    sections: dict[str, list[Path]] = {}
+    sections: dict[str, dict[str, list[Path]]] = {}
     for path in html_files:
-        folder = path.relative_to(REPO_ROOT).parts[0]
-        sections.setdefault(folder, []).append(path)
+        parts = path.relative_to(REPO_ROOT).parts
+        folder, subfolder = parts[0], "/".join(parts[1:-1])
+        sections.setdefault(folder, {}).setdefault(subfolder, []).append(path)
 
     lines = []
     for folder in sorted(sections):
         lines.append(f"## {folder}")
-        for path in sections[folder]:
-            relative_path = path.relative_to(REPO_ROOT).as_posix()
-            lines.append(f"- [{path.name}]({PAGES_BASE_URL}/{relative_path})")
-        lines.append("")
+        # The empty key holds files directly in the folder, so they sort first.
+        for subfolder in sorted(sections[folder]):
+            if subfolder:
+                lines.append(f"### {subfolder}")
+            for path in sections[folder][subfolder]:
+                relative_path = path.relative_to(REPO_ROOT).as_posix()
+                lines.append(f"- [{path.name}]({PAGES_BASE_URL}/{relative_path})")
+            lines.append("")
 
     return "\n".join(lines).rstrip() + "\n"
 
