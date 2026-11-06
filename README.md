@@ -2,13 +2,11 @@
 
 Short, focused write-ups on AI/ML, Data Analytics, Data Science, and technology topics worth a quick read. Each briefing distills a single concept, incident, or technique into something you can digest in a few minutes.
 
-## AIAndHumanity
-- [AIGoingConscious.html](https://sophiarch.github.io/Briefings/AIAndHumanity/AIGoingConscious.html)
-- [Claude_Project_Vend.html](https://sophiarch.github.io/Briefings/AIAndHumanity/Claude_Project_Vend.html)
-- [Senior_Engineers_Need_Junior_Questions.html](https://sophiarch.github.io/Briefings/AIAndHumanity/Senior_Engineers_Need_Junior_Questions.html)
-
-## Agent
-- [AI_Agent_as_Data_Scientist.html](https://sophiarch.github.io/Briefings/Agent/AI_Agent_as_Data_Scientist.html)
+## AI
+- [AIGoingConscious.html](https://sophiarch.github.io/Briefings/AI/AIAndHumanity/AIGoingConscious.html)
+- [Claude_Project_Vend.html](https://sophiarch.github.io/Briefings/AI/AIAndHumanity/Claude_Project_Vend.html)
+- [Senior_Engineers_Need_Junior_Questions.html](https://sophiarch.github.io/Briefings/AI/AIAndHumanity/Senior_Engineers_Need_Junior_Questions.html)
+- [AI_Agent_as_Data_Scientist.html](https://sophiarch.github.io/Briefings/AI/Agent/AI_Agent_as_Data_Scientist.html)
 
 ## CausalInference
 - [Cause_or_Coincidence.html](https://sophiarch.github.io/Briefings/CausalInference/Cause_or_Coincidence.html)
