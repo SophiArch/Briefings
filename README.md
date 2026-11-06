@@ -7,15 +7,11 @@ Short, focused write-ups on AI/ML, Data Analytics, Data Science, and technology 
 - [Claude_Project_Vend.html](https://sophiarch.github.io/Briefings/AI/AIAndHumanity/Claude_Project_Vend.html)
 - [Senior_Engineers_Need_Junior_Questions.html](https://sophiarch.github.io/Briefings/AI/AIAndHumanity/Senior_Engineers_Need_Junior_Questions.html)
 - [AI_Agent_as_Data_Scientist.html](https://sophiarch.github.io/Briefings/AI/Agent/AI_Agent_as_Data_Scientist.html)
-
-## CausalInference
-- [Cause_or_Coincidence.html](https://sophiarch.github.io/Briefings/CausalInference/Cause_or_Coincidence.html)
-- [Intro_Causal_Inference.html](https://sophiarch.github.io/Briefings/CausalInference/Intro_Causal_Inference.html)
-
-## Cybersecurity
-- [Alignment_Assessment.html](https://sophiarch.github.io/Briefings/Cybersecurity/Alignment_Assessment.html)
-- [GenAI_Security.html](https://sophiarch.github.io/Briefings/Cybersecurity/GenAI_Security.html)
-- [Hugging_Face_Incident.html](https://sophiarch.github.io/Briefings/Cybersecurity/Hugging_Face_Incident.html)
+- [Cause_or_Coincidence.html](https://sophiarch.github.io/Briefings/AI/CausalInference/Cause_or_Coincidence.html)
+- [Intro_Causal_Inference.html](https://sophiarch.github.io/Briefings/AI/CausalInference/Intro_Causal_Inference.html)
+- [Alignment_Assessment.html](https://sophiarch.github.io/Briefings/AI/Cybersecurity/Alignment_Assessment.html)
+- [GenAI_Security.html](https://sophiarch.github.io/Briefings/AI/Cybersecurity/GenAI_Security.html)
+- [Hugging_Face_Incident.html](https://sophiarch.github.io/Briefings/AI/Cybersecurity/Hugging_Face_Incident.html)
 
 ## Development
 - [Docker.html](https://sophiarch.github.io/Briefings/Development/Docker.html)
