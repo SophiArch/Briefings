@@ -27,7 +27,7 @@ Short, focused write-ups on AI/ML, Data Analytics, Data Science, and technology 
 - [uv.html](https://sophiarch.github.io/Briefings/Development/uv.html)
 
 ## Networking
-- [HTTP_and_REST_APIs.html](https://sophiarch.github.io/Briefings/Networking/HTTP_and_REST_APIs.html)
+- [REST_APIs_for_Beginners.html](https://sophiarch.github.io/Briefings/Networking/REST_APIs_for_Beginners.html)
 
 ## Statistics
 - [Anscombes_Quartet.html](https://sophiarch.github.io/Briefings/Statistics/Anscombes_Quartet.html)
